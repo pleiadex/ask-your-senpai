@@ -34,11 +34,15 @@ class DatabaseManager:
         return chunks
 
     @staticmethod
+    def get_embedding_function():
+        return OpenAIEmbeddings()
+
+    @staticmethod
     def update_vectorstore(chroma_path: str, chunks: list[Document]):
         
         db = Chroma(
                 persist_directory=chroma_path,
-                embedding_function=OpenAIEmbeddings()
+                embedding_function=DatabaseManager.get_embedding_function()
             )
         
         existing_items = db.get(include=[])
@@ -52,10 +56,10 @@ class DatabaseManager:
             if chunk.metadata['id'] not in existing_ids:
                 new_chunks.append(chunk)
 
+        if len(new_chunks) == 0:
+            print('No new documents to add')
+            return
+
         new_chunk_ids = [chunk.metadata['id'] for chunk in new_chunks]
         db.add_documents(new_chunks, ids=new_chunk_ids)
         db.persist()
-
-
-
-

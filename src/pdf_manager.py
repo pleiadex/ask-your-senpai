@@ -34,6 +34,8 @@ class PDFManager:
         for pdf in pdf_docs:
             reader = PdfReader(pdf)
 
+            #FIXME: handle non-rectangular images
+            
             count = 0
             for page in reader.pages:
 
