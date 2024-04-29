@@ -1,9 +1,12 @@
 import time
+from uuid import uuid4
 import streamlit as st
 from dotenv import load_dotenv
 
 from roles import SENPAI, USER
 from rag_manager import get_openai_response
+from pdf_manager import PDFManager
+from database_manager import DatabaseManager
 
 
 def response_generator(response):
@@ -20,6 +23,12 @@ def main():
     # Initialize the chat history
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
+
+    if "chroma_path" not in st.session_state:
+        uuid = str(uuid4())
+        st.session_state.chroma_path = f'./tmp/{uuid}/chroma.db'
+
+    chroma_path = st.session_state.chroma_path
 
     for message in st.session_state.chat_history:
         with st.chat_message(message["role"].name, avatar=message["role"].avatar):
@@ -44,10 +53,16 @@ def main():
             "Upload textbooks on which you want to inquire", accept_multiple_files=True)
         if st.button("Upload"):
             with st.spinner("Processing"):
-                # TODO: preprocess the pdfs
+                docs = PDFManager.get_docs_from_text(pdf_docs)
+
+                # TODO: embed images and tables
+                images = PDFManager.extract_images(pdf_docs)
+                tables = PDFManager.extract_tables(pdf_docs)
 
                 # TODO: update the vector database
-                pass
+                chunks = DatabaseManager.split_documents(docs)
+                DatabaseManager.update_vectorstore(chroma_path, chunks)
+
 
 if __name__ == '__main__':
     main()
