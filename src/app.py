@@ -1,26 +1,42 @@
+import time
 import streamlit as st
 from dotenv import load_dotenv
 
+from roles import SENPAI, USER
+from rag_manager import get_openai_response
+
+
+def response_generator(response):
+    for word in response.split():
+        yield word + " "
+        time.sleep(0.05)
+
 def main():
     load_dotenv()
+
     st.set_page_config(page_title="Ask your senpai", page_icon="🤓")
-    st.header("Ask your smart senpai 🤓")
+    st.header("Ask your smart senpai 👀")
 
     # Initialize the chat history
     if "chat_history" not in st.session_state:
-        st.session_state.chat_history = None
+        st.session_state.chat_history = []
 
+    for message in st.session_state.chat_history:
+        with st.chat_message(message["role"].name, avatar=message["role"].avatar):
+            st.markdown(message["content"])
 
     # Display the chat history  
+    if prompt := st.chat_input("Ask a question about your textbooks"):
+        
+        st.session_state.chat_history.append({"role": USER, "content": prompt})
+        with st.chat_message(USER.name, avatar=USER.avatar):
+            st.markdown(prompt)
 
-    # TODO: add submit-icon button for user input
-
-    # TODO: add image to each message
-
-    user_question = st.text_input("Ask a question about your textbooks:")
-    if user_question:
         # TODO: invoke the chain
-        pass
+        with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):
+            response = get_openai_response(prompt)
+            st.write_stream(response_generator(response))
+        st.session_state.chat_history.append({"role": SENPAI, "content": response})
 
     with st.sidebar:
         st.subheader("Textbook Library")
