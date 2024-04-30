@@ -3,6 +3,9 @@ from langchain.schema.document import Document
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 
+from langchain_cohere import CohereEmbeddings
+
+from constants.ids import CHUNK_ID
 class DatabaseManager:
 
     @staticmethod
@@ -27,7 +30,7 @@ class DatabaseManager:
                 last_page_id = page_id
 
             current_page_id = f'{source}:{page_id}:{current_chunk_counter}'
-            chunk.metadata['id'] = current_page_id
+            chunk.metadata[CHUNK_ID] = current_page_id
             
             current_chunk_counter += 1
 
@@ -35,7 +38,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_embedding_function():
-        return OpenAIEmbeddings()
+        return CohereEmbeddings()
 
     @staticmethod
     def update_vectorstore(chroma_path: str, chunks: list[Document]):
@@ -53,13 +56,13 @@ class DatabaseManager:
         new_chunks = []
 
         for chunk in chunks:
-            if chunk.metadata['id'] not in existing_ids:
+            if chunk.metadata[CHUNK_ID] not in existing_ids:
                 new_chunks.append(chunk)
 
         if len(new_chunks) == 0:
             print('No new documents to add')
             return
 
-        new_chunk_ids = [chunk.metadata['id'] for chunk in new_chunks]
+        new_chunk_ids = [chunk.metadata[CHUNK_ID] for chunk in new_chunks]
         db.add_documents(new_chunks, ids=new_chunk_ids)
         db.persist()

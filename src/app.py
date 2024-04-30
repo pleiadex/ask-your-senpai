@@ -3,7 +3,7 @@ from uuid import uuid4
 import streamlit as st
 from dotenv import load_dotenv
 
-from roles import SENPAI, USER
+from constants.roles import SENPAI, USER
 from pdf_manager import PDFManager
 from database_manager import DatabaseManager
 from rag_manager import RAGManager
@@ -17,7 +17,11 @@ def response_generator(response):
 def source_formatter(sources: list):
     source_dict = {}
     for source in sources:
-        name, page, chunk, score = source.split(':')
+        try:
+            name, page, chunk = source.split(':')
+    
+        except AttributeError: # web-search
+            return "I found this online."
 
         source_dict[name] = source_dict.get(name, [])
         source_dict[name].append(page)
@@ -31,10 +35,11 @@ def source_formatter(sources: list):
         for page in pages:
             page_counts[page] = page_counts.get(page, 0) + 1
 
-        sorted_pages = sorted(page_counts.items(), key=lambda x: x[1], reverse=True)
+        sorted_pages = sorted(page_counts.items(), key=lambda x: x[1], reverse=True) # reverse sort by count
+        sorted_pages = sorted(sorted_pages, key=lambda x: x[0]) # sort by page number
 
         for page, count in sorted_pages:
-            res += f" {page}" # ({count} times)"
+            res += f" {page} ({count} times)"
             if page != sorted_pages[-1][0]:
                 res += ","
 
@@ -56,6 +61,8 @@ def main():
         st.session_state.chroma_path = f'./tmp/{uuid}/chroma.db'
 
     chroma_path = st.session_state.chroma_path
+    
+    is_web_search_enabled = st.toggle("Allow web search", True)
 
     for message in st.session_state.chat_history:
         with st.chat_message(message["role"].name, avatar=message["role"].avatar):
@@ -69,17 +76,20 @@ def main():
             st.markdown(prompt)
 
         # invoke the chain
-        with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):
+        with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):            
             embedding_function = DatabaseManager.get_embedding_function()
-            response, sources = RAGManager.get_answer(chroma_path, embedding_function, prompt)
+            response, sources = RAGManager(chroma_path, embedding_function, is_web_search_enabled).run(prompt)
             
             st.write_stream(response_generator(response))
 
-            formatted_sources = source_formatter(sources)
+            formatted_sources = ""
             if sources is not None and len(sources) > 0:
+                formatted_sources = source_formatter(sources)
                 st.markdown(formatted_sources)
 
-        st.session_state.chat_history.append({"role": SENPAI, "content": f"{response}\n\n{formatted_sources}"})
+            content = f"{response}\n\n{formatted_sources}" if formatted_sources else response
+
+        st.session_state.chat_history.append({"role": SENPAI, "content": content})
 
     with st.sidebar:
         st.subheader("Textbook Library")
@@ -101,7 +111,6 @@ def main():
             success = st.success("Textbooks uploaded successfully")
             time.sleep(2)
             success.empty()
-            
 
 if __name__ == '__main__':
     main()
