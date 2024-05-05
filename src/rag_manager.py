@@ -24,7 +24,7 @@ from langgraph.graph import END, StateGraph
 
 class RAGManager:
 
-    def __init__(self, chroma_path:str, embedding_function, is_web_search_enabled:bool):
+    def __init__(self, chroma_path:str, embedding_function, is_web_search_enabled:bool, num_docs: int):
         self.chroma_path = chroma_path
         self.embedding_function = embedding_function
         yes = 'yes'
@@ -32,6 +32,7 @@ class RAGManager:
         self.is_web_search_enabled = is_web_search_enabled
         self.loop_count = 0
         self.max_loops = 3
+        self.num_docs = num_docs
 
     
     def build_index(self):
@@ -40,7 +41,7 @@ class RAGManager:
             embedding_function=self.embedding_function
         )
 
-        self.retriever = vectorstore.as_retriever()
+        self.retriever = vectorstore.as_retriever(kwargs={"k":self.num_docs})
 
     def retrieve(self, state):
         """
@@ -340,6 +341,7 @@ class RAGManager:
             # Check question-answering
             print("---GRADE GENERATION vs QUESTION---")
             score = answer_grader.invoke({"question": question,"generation": generation})
+            print(score)
             grade = score.binary_score
 
             if grade == "yes":
@@ -405,20 +407,25 @@ class RAGManager:
 
 
     def run(self, question:str):
+        
+        # Compile the StateGraph application
         app = self.build_graph()
+        
+        # The input to the application will be the given prompt
         inputs = {"question": question}
+        
+        # Print state information as the app traverses each node
         for output in app.stream(inputs):
             for key, value in output.items():
-                # Node
                 pprint.pprint(f"Node '{key}':")
-                # Optional: print full state at each node
             pprint.pprint("\n---\n")
 
-        # Final generation
+        # Print final response, or the generated text
         response = value["generation"]
         pprint.pprint(response)
 
-        # add refereces to response
+        # Add references to text if context was pulled from vector DB
+        sources = []
         if "documents" in value:
             sources = [doc.metadata.get(CHUNK_ID, None) for doc in value["documents"]]
 
