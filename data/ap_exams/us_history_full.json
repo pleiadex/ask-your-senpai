@@ -1,0 +1,390 @@
+{
+  "subject": "US History",
+  "qa-dataset": [
+    {
+      "id": 1,
+      "question": "Questions 1–3 refer to the excerpt below\n\"In 1739 arrived among us from Ireland the Reverend Mr. [George] Whitefield, who had\nmade himself remarkable there as an itinerant preacher. He was at first permitted to preach in\nsome of our churches; but the clergy, taking a dislike to him, soon refused him their pulpits,\nand he was obliged to preach in the fields. The multitudes of all sects and denominations\nthat attended his sermons were enormous. . . . It was wonderful to see the change soon made\nin the manners of our inhabitants. From being thoughtless or indifferent about religion, it\nseemed as if all the world were growing religious, so that one could not walk thro’ the town in\nan evening without hearing psalms sung in different families of every street.”\nBenjamin Franklin, The Autobiography of Benjamin Franklin\n\n1. Whitefield’s impact suggests that religious culture among British North American\ncolonists in the 1700s was most directly shaped by\n(A) Roman Catholic influences\n(B) interest in commerce and business\n(C) trans-Atlantic exchanges\n(D) reliance on agriculture\n",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 2,
+      "question": "Questions 1–3 refer to the excerpt below.\n\"In 1739 arrived among us from Ireland the Reverend Mr. [George] Whitefield, who had\nmade himself remarkable there as an itinerant preacher. He was at first permitted to preach in\nsome of our churches; but the clergy, taking a dislike to him, soon refused him their pulpits,\nand he was obliged to preach in the fields. The multitudes of all sects and denominations\nthat attended his sermons were enormous. . . . It was wonderful to see the change soon made\nin the manners of our inhabitants. From being thoughtless or indifferent about religion, it\nseemed as if all the world were growing religious, so that one could not walk thro’ the town in\nan evening without hearing psalms sung in different families of every street.”\n\nBenjamin Franklin, The Autobiography of Benjamin Franklin\n\n2. Whitefield’s open-air preaching contributed most directly to which of the following trends?\n(A) The growth of the ideology of republican motherhood\n(B) Greater independence and diversity of thought\n(C) Movement of settlers to the backcountry\n(D) The pursuit of social reform",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 3,
+      "question": "Questions 1–3 refer to the excerpt below.\"In 1739 arrived among us from Ireland the Reverend Mr. [George] Whitefield, who had made himself remarkable there as an itinerant preacher. He was at first permitted to preach in some of our churches; but the clergy, taking a dislike to him, soon refused him their pulpits, and he was obliged to preach in the fields. The multitudes of all sects and denominations that attended his sermons were enormous. . . . It was wonderful to see the change soon made in the manners of our inhabitants. From being thoughtless or indifferent about religion, it seemed as if all the world were growing religious, so that one could not walk thro’ the town in an evening without hearing psalms sung in different families of every street.” Benjamin Franklin, The Autobiography of Benjamin Franklin\n\n3. The preaching described in the excerpt is an example of which of the following developments in the 1700s? (A) The emergence of an idea of republican self-government (B) The beginning of calls for the abolition of slavery (C) The increased influence of the Enlightenment (D) The expansion of Protestant evangelism",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 4,
+      "question": "MIGRATION TO THE UNITED STATES, 1820 –1860, 4. Which of the following was a significant cause of the trend from 1843 to 1854 shown in the graph? (A) Active encouragement of migration by the United States government (B) Economic and political difficulties in Germany and Ireland (C) Incentives offered by United States companies looking to hire skilled migrants (D) Adoption of free trade policies by European governments",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 5,
+      "question": "MIGRATION TO THE UNITED STATES, 1820 –1860.  5. Which of the following was a direct effect of the trend in immigration after 1845 shown on the graph? (A) An increase in sectional tensions (B) A major economic downturn (C) An upsurge in nativist sentiment (D) The collapse of the second party system",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 6,
+      "question": "MIGRATION TO THE UNITED STATES, 1820 –1860. 6. The main trend shown in the graph was most directly associated with which of the following processes occurring in the United States at the time? (A) The convergence of European and American cultures (B) The emergence of an industrialized economy (C) The displacement of American Indians from the Southeast (D) The resurgence of evangelical Protestantism",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 7,
+      "question": "\"Questions 7–9 refer to the excerpt below.\n“The history of mankind is a history of repeated injuries and usurpations on the part of\nman toward woman, having in direct object the establishment of an absolute tyranny over\nher. To prove this, let facts be submitted to a candid world.\n“He has never permitted her to exercise her inalienable right to the elective franchise.\n“He has compelled her to submit to laws, in the formation of which she had no voice. . . .\n“Having deprived her of this first right of a citizen, the elective franchise, thereby leaving\nher without representation in the halls of legislation, he has oppressed her on all sides. . . .\n“He has taken from her all right in property, even to the wages she earns.”\nSeneca Falls Convention, Declaration of Sentiments and Resolutions, 1848\n\n7. The ideas expressed in the excerpt most directly challenged the prevailing ideal in the\nearly nineteenth century that\n(A) women should enjoy full and equal rights with men\n(B) women should focus on the home and the domestic sphere\n(C) the ability of women to earn wages was a positive development\n(D) women should educate their children about the rights and responsibilities of\ncitizenship\n\"",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 8,
+      "question":"Questions 7–9 refer to the excerpt below.\n“The history of mankind is a history of repeated injuries and usurpations on the part of\nman toward woman, having in direct object the establishment of an absolute tyranny over\nher. To prove this, let facts be submitted to a candid world.\n“He has never permitted her to exercise her inalienable right to the elective franchise.\n“He has compelled her to submit to laws, in the formation of which she had no voice. . . .\n“Having deprived her of this first right of a citizen, the elective franchise, thereby leaving\nher without representation in the halls of legislation, he has oppressed her on all sides. . . .\n“He has taken from her all right in property, even to the wages she earns.”\nSeneca Falls Convention, Declaration of Sentiments and Resolutions, 1848\n\n\n8. Which of the following developments in the second half of the nineteenth century best\nrepresented the continuation of the ideas expressed in the declaration?\n(A) The formation of voluntary organizations and reform efforts\n(B) Women’s support for the Social Gospel\n(C) Support for outlawing the production and sale of alcohol\n(D) A movement focused on religious revivals and personal conversion\n",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 9,
+      "question":"Questions 7–9 refer to the excerpt below.\n“The history of mankind is a history of repeated injuries and usurpations on the part of\nman toward woman, having in direct object the establishment of an absolute tyranny over\nher. To prove this, let facts be submitted to a candid world.\n“He has never permitted her to exercise her inalienable right to the elective franchise.\n“He has compelled her to submit to laws, in the formation of which she had no voice. . . .\n“Having deprived her of this first right of a citizen, the elective franchise, thereby leaving\nher without representation in the halls of legislation, he has oppressed her on all sides. . . .\n“He has taken from her all right in property, even to the wages she earns.”\nSeneca Falls Convention, Declaration of Sentiments and Resolutions, 1848\n\n\n9. Many supporters of the declaration in 1848 broke ranks with which of the following\ngroups by the 1870s?\n(A) Social Darwinists\n(B) Supporters of Southern secession and states’ rights\n(C) Supporters of the Fifteenth Amendment\n(D) Isolationists\n",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 10,
+      "question":"Questions 10 and 11 refer to the excerpt below.\n“Governments are instituted among Men, deriving their just powers from the consent\nof the governed. That whenever any Form of Government becomes destructive of these\nends, it is the Right of the People to alter or to abolish it, and to institute new Government,\nlaying its foundation on such principles and organizing its powers in such form, as to\nthem shall seem most likely to effect their Safety and Happiness.”\n\nThomas Jefferson, Declaration of Independence, 1776\n\n\n10. The excerpt was written in response to the\n(A) British government’s attempt to assert greater control over the North American colonies\n(B) British government’s failure to protect colonists from attacks by American Indians\n(C) colonial governments’ failures to implement mercantilist policies\n(D) colonial governments’ attempts to extend political rights to new groups",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 11,
+      "question":"Questions 10 and 11 refer to the excerpt below.\n“Governments are instituted among Men, deriving their just powers from the consent\nof the governed. That whenever any Form of Government becomes destructive of these\nends, it is the Right of the People to alter or to abolish it, and to institute new Government,\nlaying its foundation on such principles and organizing its powers in such form, as to\nthem shall seem most likely to effect their Safety and Happiness.”\n\nThomas Jefferson, Declaration of Independence, 1776\n\n\n11. The ideas about government expressed in the excerpt are most consistent with which of\nthe following?\n(A) The concept of hereditary rights and privileges\n(B) The belief in Manifest Destiny\n(C) The principle of religious freedom\n(D) The ideas of the Enlightenment",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 12,
+      "question":"Questions 12–14 refer to the excerpt below.\n“We conclude that in the field of public education the doctrine of ‘separate but equal’ has\nno place. Separate educational facilities are inherently unequal.”\nChief Justice Earl Warren, writing the unanimous opinion of the United States\nSupreme Court in Brown v. Board of Education of Topeka, 1954\n\n12. Which of the following was the most immediate result of the decision excerpted?\n(A) Radicals critiqued government actions as doing too little to transform the racial\nstatus quo.\n(B) Education advocates raised awareness of the effect of poverty on students’ opportunities.\n(C) Civil rights activists became increasingly divided over tactical and philosophical issues.\n(D) Segregationists in southern states temporarily closed many public schools in an\neffort to resist the decision.",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 13,
+      "question":"Questions 12–14 refer to the excerpt below.\n“We conclude that in the field of public education the doctrine of ‘separate but equal’ has\nno place. Separate educational facilities are inherently unequal.”\nChief Justice Earl Warren, writing the unanimous opinion of the United States\nSupreme Court in Brown v. Board of Education of Topeka, 1954\n\n13. The decision excerpted most directly reflected a growing belief after the Second World\nWar that the power of the federal government should be used to\n(A) promote greater racial justice\n(B) revitalize cities\n(C) foster economic opportunity\n(D) defend traditional visions of morality",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 14,
+      "question":"Questions 12–14 refer to the excerpt below.\n“We conclude that in the field of public education the doctrine of ‘separate but equal’ has\nno place. Separate educational facilities are inherently unequal.”\nChief Justice Earl Warren, writing the unanimous opinion of the United States\nSupreme Court in Brown v. Board of Education of Topeka, 1954\n\n\n14. The Brown decision reversed which of the following earlier decisions?\n(A) Marbury v. Madison, which established the principle of judicial review\n(B) Worcester v. Georgia, which established that the federal government rather than\nindividual states had authority in American Indian affairs\n(C) Dred Scott v. Sandford, which proclaimed that slaves could not be citizens\n(D) Plessy v. Ferguson, which endorsed racial segregation laws",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 15,
+      "question":"Questions 15 and 16 refer to the excerpt below.\n“The system of quotas . . . was the first major pillar of the Immigration Act of 1924. The\nsecond provided for the exclusion of persons ineligible to citizenship. . . . Ineligibility\nto citizenship and exclusion applied to the peoples of all the nations of East and South\nAsia. Nearly all Asians had already been excluded from immigration. . . . The exclusion\nof persons ineligible to citizenship in 1924 . . . completed Asiatic exclusion. . . . Moreover,\nit codified the principle of racial exclusion into the main body of American immigration\nand naturalization law.”\n\nMae M. Ngai, historian, Impossible Subjects: Illegal Aliens and the\nMaking of Modern America, 2004\n\n\n15. The Immigration Act of 1924 most directly reflected\n(A) cultural tensions between scientific modernism and religious fundamentalism in\nthe 1920s\n(B) conflicts arising from the migration of African Americans to urban centers in\nthe North\n(C) the emergence of an increasingly national culture in the 1920s shaped by art,\ncinema, and mass media\n(D) social tensions emerging from the First World War",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 16,
+      "question":"Questions 15 and 16 refer to the excerpt below.\n“The system of quotas . . . was the first major pillar of the Immigration Act of 1924. The\nsecond provided for the exclusion of persons ineligible to citizenship. . . . Ineligibility\nto citizenship and exclusion applied to the peoples of all the nations of East and South\nAsia. Nearly all Asians had already been excluded from immigration. . . . The exclusion\nof persons ineligible to citizenship in 1924 . . . completed Asiatic exclusion. . . . Moreover,\nit codified the principle of racial exclusion into the main body of American immigration\nand naturalization law.”\n\nMae M. Ngai, historian, Impossible Subjects: Illegal Aliens and the\nMaking of Modern America, 2004\n\n\n16. Which of the following evidence would best support Ngai’s argument in the excerpt?\n(A) Census data showing the changing percentages of the foreign-born population\nfrom 1920 to 1930\n(B) Narratives describing the challenges of immigrant family life in the 1920s\n(C) Diplomatic correspondence reflecting the increasing isolationism of United States\nforeign policy in the 1920s and 1930s\n(D) Census data revealing the Great Migration of African Americans to cities in the\nNorth and West in the 1920s",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 17,
+      "question":"Questions 17 and 18 refer to the excerpt below.\n“I believe that it must be the policy of the United States to support free peoples who are\nresisting attempted subjugation by armed minorities or by outside pressures. I believe we\nmust assist free peoples to work out their own destinies in their own way. I believe that\nour help should be primarily through economic and financial aid which is essential to\neconomic stability and orderly political processes.”\nPresident Harry Truman, address before a joint session of Congress articulating\nwhat would become known as the Truman Doctrine, 1947\n\n17. In his statement Truman had the goal of\n(A) restraining communist military power and ideological influence\n(B) creating alliances with recently decolonized nations\n(C) reestablishing the principle of isolationism\n(D) avoiding a military confrontation with the Soviet Union",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 18,
+      "question":"Questions 17 and 18 refer to the excerpt below.\n“I believe that it must be the policy of the United States to support free peoples who are\nresisting attempted subjugation by armed minorities or by outside pressures. I believe we\nmust assist free peoples to work out their own destinies in their own way. I believe that\nour help should be primarily through economic and financial aid which is essential to\neconomic stability and orderly political processes.”\nPresident Harry Truman, address before a joint session of Congress articulating\nwhat would become known as the Truman Doctrine, 1947\n\n\n18. Truman issued the doctrine primarily in order to\n(A) support decolonization in Asia and Africa\n(B) support United States allies in Latin America\n(C) protect United States interests in the Middle East\n(D) bolster noncommunist nations, particularly in Europe",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 19,
+      "question":"Questions 19–21 refer to the late-nineteenth-century photograph below by journalist Jacob Riis.\n\nThe photograph shows six men asleep in a small, very crowded room. Their clothing seems to be rumpled and well-worn. Two of the men are on the top level of a bunk bed with two men on the level below. The other two men are asleep in a corner of the room on the floor. To one side of the room are shelves on the wall holding pots and pans, along with a wood burning stove. On top of the stove are a trunk and a burlap bag. A pair of boots is sitting in front of the stove. A hat is hanging on the wall next to a bag full of clothing.\n\n\n19. Conditions like those shown in the image contributed most directly to which of the\nfollowing?\n(A) The passage of laws restricting immigration to the United States\n(B) An increase in Progressive reform activity\n(C) A decline in efforts to Americanize immigrants\n(D) The weakening of labor unions such as the American Federation of Labor",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 20,
+      "question":"Questions 19–21 refer to the late-nineteenth-century photograph below by journalist Jacob Riis.\n\nThe photograph shows six men asleep in a small, very crowded room. Their clothing seems to be rumpled and well-worn. Two of the men are on the top level of a bunk bed with two men on the level below. The other two men are asleep in a corner of the room on the floor. To one side of the room are shelves on the wall holding pots and pans, along with a wood burning stove. On top of the stove are a trunk and a burlap bag. A pair of boots is sitting in front of the stove. A hat is hanging on the wall next to a bag full of clothing.\n\n\n20. The conditions shown in the image depict which of the following trends in the late\nnineteenth century?\n(A) The growing gap between wealthy people and people living in poverty\n(B) The rise of the settlement house and Populist movements\n(C) The increased corruption in urban politics\n(D) The migration of African Americans to the North",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 21,
+      "question":"Questions 19–21 refer to the late-nineteenth-century photograph below by journalist Jacob Riis.\n\nThe photograph shows six men asleep in a small, very crowded room. Their clothing seems to be rumpled and well-worn. Two of the men are on the top level of a bunk bed with two men on the level below. The other two men are asleep in a corner of the room on the floor. To one side of the room are shelves on the wall holding pots and pans, along with a wood burning stove. On top of the stove are a trunk and a burlap bag. A pair of boots is sitting in front of the stove. A hat is hanging on the wall next to a bag full of clothing.\n\n\n21. Advocates for individuals such as those shown in the image would have most likely\nagreed with which of the following perspectives?\n(A) The Supreme Court’s decision in Plessy v. Ferguson was justified.\n(B) Capitalism, free of government regulation, would improve social conditions.\n(C) Both wealth and poverty are the products of natural selection.\n(D) Government should act to eliminate the worst abuses of industrial society.",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 22,
+      "question":"Questions 22 and 23 refer to the excerpt below.\n“Excepting only Yosemite, Hetch Hetchy is the most attractive and wonderful valley\nwithin the bounds of the great Yosemite National Park and the best of all the camp\ngrounds. People are now flocking to it in ever-increasing numbers for health and\nrecreation of body and mind. Though the walls are less sublime in height than those\nof Yosemite, its groves, gardens, and broad, spacious meadows are more beautiful and\npicturesque. . . . Last year in October I visited the valley with Mr. William Keith, the\nartist. He wandered about from view to view, enchanted, made thirty-eight sketches,\nand enthusiastically declared that in varied picturesque beauty Hetch Hetchy greatly\nsurpassed Yosemite. It is one of God’s best gifts, and ought to be faithfully guarded.”\nJohn Muir, Century Magazine, 1909\n\n\n22. Which of the following aspects of Muir’s description expresses a major change in\nAmericans’ views of the natural environment?\n(A) The idea that wilderness areas are worthy subjects for artistic works\n(B) The idea that wilderness areas serve as evidence of divine creation\n(C) The idea that government should preserve wilderness areas in a natural state\n(D) The idea that mountainous scenery is more picturesque and beautiful than\nflat terrain",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 23,
+      "question":"Questions 22 and 23 refer to the excerpt below.\n“Excepting only Yosemite, Hetch Hetchy is the most attractive and wonderful valley\nwithin the bounds of the great Yosemite National Park and the best of all the camp\ngrounds. People are now flocking to it in ever-increasing numbers for health and\nrecreation of body and mind. Though the walls are less sublime in height than those\nof Yosemite, its groves, gardens, and broad, spacious meadows are more beautiful and\npicturesque. . . . Last year in October I visited the valley with Mr. William Keith, the\nartist. He wandered about from view to view, enchanted, made thirty-eight sketches,\nand enthusiastically declared that in varied picturesque beauty Hetch Hetchy greatly\nsurpassed Yosemite. It is one of God’s best gifts, and ought to be faithfully guarded.”\nJohn Muir, Century Magazine, 1909\n\n23. Muir’s ideas are most directly a reaction to the\n(A) increasing usage and exploitation of western landscapes\n(B) increase in urban populations, including immigrant workers attracted by a growing\nindustrial economy\n(C) westward migration of groups seeking religious refuge\n(D) opening of a new frontier in recently annexed territory",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 24,
+      "question":"Questions 24–27 refer to the excerpt below.\n“[H]istory and experience prove that foreign influence is one of the most baneful foes of\nrepublican government. . . . Excessive partiality for one foreign nation and excessive dislike\nof another cause those whom they actuate to see danger only on one side and serve to veil\nand even second the arts of influence on the other. . . . The great rule of conduct for us,\nin regard to foreign nations, is in extending our commercial relations to have with them\nas little political connection as possible. So far as we have already formed engagements,\nlet them be fulfilled with perfect good faith. Here let us stop. Europe has a set of primary\ninterests which to us have none, or a very remote relation. Hence she must be engaged in\nfrequent controversies, the causes of which are essentially foreign to our concerns.”\nGeorge Washington, Farewell Address, 1796\n\n\n24. The concerns expressed by Washington were a response to the\n\n(A) debate over the proper treatment of American Indian tribes in the trans-\nAppalachian West\n\n(B) dispute over the possibility of annexing Canada from Great Britain\n(C) controversy regarding support for the revolutionary government of France\n(D) conflict with Great Britain over the treatment of American Loyalists",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 25,
+      "question":"Questions 24–27 refer to the excerpt below.\n“[H]istory and experience prove that foreign influence is one of the most baneful foes of\nrepublican government. . . . Excessive partiality for one foreign nation and excessive dislike\nof another cause those whom they actuate to see danger only on one side and serve to veil\nand even second the arts of influence on the other. . . . The great rule of conduct for us,\nin regard to foreign nations, is in extending our commercial relations to have with them\nas little political connection as possible. So far as we have already formed engagements,\nlet them be fulfilled with perfect good faith. Here let us stop. Europe has a set of primary\ninterests which to us have none, or a very remote relation. Hence she must be engaged in\nfrequent controversies, the causes of which are essentially foreign to our concerns.”\nGeorge Washington, Farewell Address, 1796\n\n\n25. The ideas expressed in Washington’s address most strongly influenced which United\nStates foreign policy decision in the twentieth century?\n(A) The establishment of the United Nations in 1945\n(B) The formation of the NATO alliance between the United States and Western\nEurope in 1949\n(C) The refusal to join the League of Nations in 1919\n(D) The oil embargo against Japan in 1941",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 26,
+      "question":"Questions 24–27 refer to the excerpt below.\n“[H]istory and experience prove that foreign influence is one of the most baneful foes of\nrepublican government. . . . Excessive partiality for one foreign nation and excessive dislike\nof another cause those whom they actuate to see danger only on one side and serve to veil\nand even second the arts of influence on the other. . . . The great rule of conduct for us,\nin regard to foreign nations, is in extending our commercial relations to have with them\nas little political connection as possible. So far as we have already formed engagements,\nlet them be fulfilled with perfect good faith. Here let us stop. Europe has a set of primary\ninterests which to us have none, or a very remote relation. Hence she must be engaged in\nfrequent controversies, the causes of which are essentially foreign to our concerns.”\nGeorge Washington, Farewell Address, 1796\n\n\n26. Which of the following groups most strongly opposed Washington’s point of view in\nthe address?\n(A) Democratic-Republicans\n(B) New England merchants\n(C) Southern plantation owners\n(D) Federalists",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 27,
+      "question":"Questions 24–27 refer to the excerpt below.\n“[H]istory and experience prove that foreign influence is one of the most baneful foes of\nrepublican government. . . . Excessive partiality for one foreign nation and excessive dislike\nof another cause those whom they actuate to see danger only on one side and serve to veil\nand even second the arts of influence on the other. . . . The great rule of conduct for us,\nin regard to foreign nations, is in extending our commercial relations to have with them\nas little political connection as possible. So far as we have already formed engagements,\nlet them be fulfilled with perfect good faith. Here let us stop. Europe has a set of primary\ninterests which to us have none, or a very remote relation. Hence she must be engaged in\nfrequent controversies, the causes of which are essentially foreign to our concerns.”\nGeorge Washington, Farewell Address, 1796\n\n\n27. Most historians would argue that the recommendations of Washington’s address ceased\nto have a significant influence on United States foreign policy as a result of\n(A) westward expansion in the nineteenth century\n(B) support for Cuban revolutionaries in the Spanish-American War\n(C) Woodrow Wilson’s support for international democratic principles during the First\nWorld War\n(D) involvement in the Second World War",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 28,
+      "question":"Questions 28–30 refer to the excerpt below.\n“The colonizers brought along plants and animals new to the Americas, some by design\nand others by accident. Determined to farm in a European manner, the colonists\nintroduced their domesticated livestock—honeybees, pigs, horses, mules, sheep, and\ncattle—and their domesticated plants, including wheat, barley, rye, oats, grasses, and\ngrapevines. But the colonists also inadvertently carried pathogens, weeds, and rats. . . .\nIn sum, the remaking of the Americas was a team effort by a set of interdependent species\nled and partially managed (but never fully controlled) by European people.”\n\nAlan Taylor, historian, American Colonies, 2001\n\n\n\n28. The export of New World crops to the Old World transformed European society mostly by\n(A) improving diets and thereby stimulating population growth\n(B) encouraging enclosure of open lands and pushing workers off of farms\n(C) promoting greater exploration of the interior of the American continents\n(D) fostering conflicts among major powers over access to new food supplies",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 29,
+      "question":"Questions 28–30 refer to the excerpt below.\n“The colonizers brought along plants and animals new to the Americas, some by design\nand others by accident. Determined to farm in a European manner, the colonists\nintroduced their domesticated livestock—honeybees, pigs, horses, mules, sheep, and\ncattle—and their domesticated plants, including wheat, barley, rye, oats, grasses, and\ngrapevines. But the colonists also inadvertently carried pathogens, weeds, and rats. . . .\nIn sum, the remaking of the Americas was a team effort by a set of interdependent species\nled and partially managed (but never fully controlled) by European people.”\n\nAlan Taylor, historian, American Colonies, 2001\n\n\n\n29. The patterns described in the excerpt most directly foreshadowed which of the\nfollowing developments?\n(A) The spread of maize cultivation northward from present-day Mexico into the\nAmerican Southwest\n(B) The population decline in Native American societies\n(C) The gradual shift of European economies from feudalism to capitalism\n(D) The emergence of racially mixed populations in the Americas",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 30,
+      "question":"Questions 28–30 refer to the excerpt below.\n“The colonizers brought along plants and animals new to the Americas, some by design\nand others by accident. Determined to farm in a European manner, the colonists\nintroduced their domesticated livestock—honeybees, pigs, horses, mules, sheep, and\ncattle—and their domesticated plants, including wheat, barley, rye, oats, grasses, and\ngrapevines. But the colonists also inadvertently carried pathogens, weeds, and rats. . . .\nIn sum, the remaking of the Americas was a team effort by a set of interdependent species\nled and partially managed (but never fully controlled) by European people.”\n\nAlan Taylor, historian, American Colonies, 2001\n\n\n30. The trends described by Taylor most directly illustrate which of the following major\nhistorical developments in the Atlantic world?\n(A) The growth of mercantile empires that stretched across the Atlantic\n(B) The increasing 46nglicization of the English colonies\n(C) The phenomenon known as the Columbian Exchange\n(D) The rise of the trans-Atlantic slave trade",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 31,
+      "question":"Questions 31–34 refer to the map below.\n\nL. Huron\n\nAtlantic\nOcean\n\nUp to 1700\nLimit of Settlements\nUp to 1750\nUp to 1775\n\nL. Erie\n\nL. Ontario\n\nA p p a l a c h i a n\nM o u n t a i n s\n\nBRITISH SETTLEMENT OF THE THIRTEEN COLONIES 1700–1775\n\n\n\n31. The map most directly depicts the\n(A) inland expansion of the colonial population\n(B) effects of industrialization\n(C) pattern of American Indian resistance\n(D) decline of tobacco production",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 32,
+      "question":"Questions 31–34 refer to the map below.\n\nL. Huron\n\nAtlantic\nOcean\n\nUp to 1700\nLimit of Settlements\nUp to 1750\nUp to 1775\n\nL. Erie\n\nL. Ontario\n\nA p p a l a c h i a n\nM o u n t a i n s\n\nBRITISH SETTLEMENT OF THE THIRTEEN COLONIES 1700–1775\n\n\n\n32. The pattern of colonial settlement up to 1700 resulted most directly from which of the\nfollowing factors?\n(A) The large size of British colonial populations relative to American Indian\npopulations\n(B) British recognition of Native American sovereignty\n(C) The orientation of the British colonies toward producing commodities for export\nto Europe\n(D) British government attempts to impose greater control over the colonies in the\nlate 1600s",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 33,
+      "question":"Questions 31–34 refer to the map below.\n\nL. Huron\n\nAtlantic\nOcean\n\nUp to 1700\nLimit of Settlements\nUp to 1750\nUp to 1775\n\nL. Erie\n\nL. Ontario\n\nA p p a l a c h i a n\nM o u n t a i n s\n\nBRITISH SETTLEMENT OF THE THIRTEEN COLONIES 1700–1775\n\n\n\n33. The change in settlement patterns from 1700 to 1775 had which of the following\neffects?\n(A) A decrease in the coastal population\n(B) An increase in conflicts between British settlers and American Indians\n(C) A decrease in the economic importance of slavery and other forms of coerced labor\n(D) An increase in trade with French Canada",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 34,
+      "question":"Questions 31–34 refer to the map below.\n\nL. Huron\n\nAtlantic\nOcean\n\nUp to 1700\nLimit of Settlements\nUp to 1750\nUp to 1775\n\nL. Erie\n\nL. Ontario\n\nA p p a l a c h i a n\nM o u n t a i n s\n\nBRITISH SETTLEMENT OF THE THIRTEEN COLONIES 1700–1775\n\n\n\n34. The change in settlement patterns from 1700 to 1775 best explains the\n(A) development of economic differences between the northern and southern colonies\n(B) colonists’ difficulties in effectively resisting the British military during the\nAmerican Revolution\n(C) significant proportion of colonists who remained loyal to Great Britain during the\nAmerican Revolution\n(D) growth of social tensions between backcountry settlers and coastal elites",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 35,
+      "question":"Questions 35–37 refer to the excerpt below.\n“[T]he condition of the African race throughout all the States where the ancient relation\nbetween the two [races] has been retained enjoys a degree of health and comfort which\nmay well compare with that of the laboring population of any country in Christendom;\nand, it may be added that in no other condition, or in any other age or country, has the\nNegro race ever attained so high an elevation in morals, intelligence, or civilization.”\nJohn C. Calhoun, political leader, 1844\n\n\n35. Which of the following groups would have been most likely to support Calhoun’s views\nexpressed in the excerpt?\n(A) Members of nativist political parties\n(B) Members of the Whig Party\n(C) Southern landowners\n(D) Northern industrialists",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 36,
+      "question":"Questions 35–37 refer to the excerpt below.\n“[T]he condition of the African race throughout all the States where the ancient relation\nbetween the two [races] has been retained enjoys a degree of health and comfort which\nmay well compare with that of the laboring population of any country in Christendom;\nand, it may be added that in no other condition, or in any other age or country, has the\nNegro race ever attained so high an elevation in morals, intelligence, or civilization.”\nJohn C. Calhoun, political leader, 1844\n\n\n36. Which of the following most directly undermines Calhoun’s assertions?\n(A) Many slaves adopted elements of Christianity.\n(B) Many slaves engaged in forms of resistance to slavery.\n(C) Abolitionist societies encountered difficulty organizing in Southern states.\n(D) A majority of White Southerners were not slaveholders.\n\n",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 37,
+      "question":"Questions 35–37 refer to the excerpt below.\n“[T]he condition of the African race throughout all the States where the ancient relation\nbetween the two [races] has been retained enjoys a degree of health and comfort which\nmay well compare with that of the laboring population of any country in Christendom;\nand, it may be added that in no other condition, or in any other age or country, has the\nNegro race ever attained so high an elevation in morals, intelligence, or civilization.”\nJohn C. Calhoun, political leader, 1844\n\n\n37. In the 1840s and 1850s, the views expressed by Calhoun most directly contributed to\n(A) the United States acquisition of new territory in the West\n(B) increased sectional divisions between the North and the South\n(C) the development of sharecropping and tenant farming in the South\n(D) the rise of voluntary organizations to promote religious reform",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 38,
+      "question":"Questions 38–40 refer to the excerpt below.\n“My purpose is not to persuade children from their parents; men from their wives; nor\nservants from their masters: only, such as with free consent may be spared: But that each\n[English] parish, or village, in city or country, that will but apparel their fatherless children,\nof thirteen or fourteen years of age, or young married people, that have small wealth to\nlive on; here by their labor may live exceeding well: provided always that first there be\nsufficient power to command them, . . . and sufficient masters (as carpenters, masons,\nfishers, fowlers, gardeners, husbandmen, sawyers, smiths, spinsters, tailors, weavers, and\nsuch like) to take ten, twelve, or twenty, or as is their occasion, for apprentices. The masters\nby this may quickly grow rich; these [apprentices] may learn their trades themselves, to do\nthe like; to a general and an incredible benefit for king, and country, master, and servant.”\nJohn Smith, English adventurer, A Description of New England, 1616\n\n\n38. The excerpt suggests that promoters such as Smith most typically presented migration\nas a means for\n(A) workers to achieve social mobility and economic opportunity\n(B) people to earn wages to send home to their families\n(C) countries to acquire new sources of mineral wealth\n(D) joint-stock companies to generate profits",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 39,
+      "question":"Questions 38–40 refer to the excerpt below.\n“My purpose is not to persuade children from their parents; men from their wives; nor\nservants from their masters: only, such as with free consent may be spared: But that each\n[English] parish, or village, in city or country, that will but apparel their fatherless children,\nof thirteen or fourteen years of age, or young married people, that have small wealth to\nlive on; here by their labor may live exceeding well: provided always that first there be\nsufficient power to command them, . . . and sufficient masters (as carpenters, masons,\nfishers, fowlers, gardeners, husbandmen, sawyers, smiths, spinsters, tailors, weavers, and\nsuch like) to take ten, twelve, or twenty, or as is their occasion, for apprentices. The masters\nby this may quickly grow rich; these [apprentices] may learn their trades themselves, to do\nthe like; to a general and an incredible benefit for king, and country, master, and servant.”\nJohn Smith, English adventurer, A Description of New England, 1616\n\n\n39. The excerpt would be most useful to historians as a source of information about which of the following?\n(A) The interaction of English colonial settlers with native populations in the early seventeenth century\n(B) The harsh realities of life in the early seventeenth-century American colonies,\nincluding illness, high mortality rates, and starvation\n(C) The role that appeals and advertising played in encouraging men and women to participate in colonization efforts\n(D) The nature of master and apprentice relationships in England in the early seventeenth century",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 40,
+      "question":"Questions 38–40 refer to the excerpt below.\n“My purpose is not to persuade children from their parents; men from their wives; nor\nservants from their masters: only, such as with free consent may be spared: But that each\n[English] parish, or village, in city or country, that will but apparel their fatherless children,\nof thirteen or fourteen years of age, or young married people, that have small wealth to\nlive on; here by their labor may live exceeding well: provided always that first there be\nsufficient power to command them, . . . and sufficient masters (as carpenters, masons,\nfishers, fowlers, gardeners, husbandmen, sawyers, smiths, spinsters, tailors, weavers, and\nsuch like) to take ten, twelve, or twenty, or as is their occasion, for apprentices. The masters\nby this may quickly grow rich; these [apprentices] may learn their trades themselves, to do\nthe like; to a general and an incredible benefit for king, and country, master, and servant.”\nJohn Smith, English adventurer, A Description of New England, 1616\n\n\n40. Which of the following was a major contrast between the New England colonies and the colonies of France?\n(A) The New England colonies were based on more diverse agriculture and commerce.\n(B) The French settled more often in cities and towns.\n(C) The French had more conflicts with American Indians.\n(D) New England developed a less rigid racial hierarchy.",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 41,
+      "question":"Questions 41–43 refer to the excerpt below.\n“There is, at present, no danger of another insurrection against the authority of the United\nStates on a large scale, and the people are willing to reconstruct their State governments,\nand to send their senators and representatives to Congress. But as to the moral value\nof these results, we must not indulge in any delusions. . . . [T]here is, as yet, among the\nsouthern people an utter absence of national feeling. . . .\n“Aside from the assumption that the Negro will not work without physical compulsion,\nthere appears to be another popular notion . . . that the Negro exists for the special object\nof raising cotton, rice and sugar for the whites, and that it is illegitimate for him to indulge,\nlike other people, in the pursuit of his own happiness in his own way.”\n\nCarl Schurz, Report on the Condition of the South, 1865\n\n\n\n41. Schurz’s analysis most directly illustrated the debates about which of the following issues in the South?\n(A) The industrialization of the South\n(B) The issuing of the Emancipation Proclamation\n(C) The process of readmitting Confederate states\n(D) The extent of federal legislative power",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 42,
+      "question":"Questions 41–43 refer to the excerpt below.\n“There is, at present, no danger of another insurrection against the authority of the United\nStates on a large scale, and the people are willing to reconstruct their State governments,\nand to send their senators and representatives to Congress. But as to the moral value\nof these results, we must not indulge in any delusions. . . . [T]here is, as yet, among the\nsouthern people an utter absence of national feeling. . . .\n“Aside from the assumption that the Negro will not work without physical compulsion,\nthere appears to be another popular notion . . . that the Negro exists for the special object\nof raising cotton, rice and sugar for the whites, and that it is illegitimate for him to indulge,\nlike other people, in the pursuit of his own happiness in his own way.”\n\nCarl Schurz, Report on the Condition of the South, 1865\n\n\n\n42. The attitudes of White Southerners described by Schurz contributed to which of the following developments in the last quarter of the nineteenth century?\n\n(A) The sale of most plantations to African Americans to keep them in the South\n(B) The establishment of sharecropping throughout the South\n(C) The Nullification Crisis caused by Southern resistance to federal policy\n(D) The rise of the Whig Party in the South",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 43,
+      "question":"Questions 41–43 refer to the excerpt below.\n“There is, at present, no danger of another insurrection against the authority of the United\nStates on a large scale, and the people are willing to reconstruct their State governments,\nand to send their senators and representatives to Congress. But as to the moral value\nof these results, we must not indulge in any delusions. . . . [T]here is, as yet, among the\nsouthern people an utter absence of national feeling. . . .\n“Aside from the assumption that the Negro will not work without physical compulsion,\nthere appears to be another popular notion . . . that the Negro exists for the special object\nof raising cotton, rice and sugar for the whites, and that it is illegitimate for him to indulge,\nlike other people, in the pursuit of his own happiness in his own way.”\n\nCarl Schurz, Report on the Condition of the South, 1865\n\n\n\n43. Efforts by Republicans such as Schurz to establish a base for their party in the South after the Civil War ultimately failed because\n(A) Republicans feared the South would secede again if the party became too successful\n(B) Republican opposition to African American rights alienated many White\nSoutherners\n(C) Republicans grew weary of pressing their Reconstruction agenda in a hostile\nenvironment\n(D) Republicans believed it better to withdraw from the South than to become\ncorrupted by Southern politics",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 44,
+      "question":"Questions 44–46 refer to the excerpt below.\n“The peace-loving nations must make a concerted effort in opposition to those violations\nof treaties and those ignorings of humane instincts which today are creating a state\nof international anarchy and instability from which there is no escape through mere\nisolation or neutrality.\n“Those who cherish their freedom and recognize and respect the equal right of their\nneighbors to be free and live in peace, must work together for the triumph of law and\nmoral principles in order that peace, justice and confidence may prevail in the world.\nThere must be a return to a belief in the pledged word, in the value of a signed treaty.\nThere must be recognition of the fact that national morality is as vital as private morality.”\nPresident Franklin Roosevelt, Quarantine Speech, 1937\n\n\n44. The ideas expressed in the excerpt differed from the prevailing United States approach to foreign policy issues primarily in that Roosevelt was\n(A) arguing to expand the role of the United States in the world\n(B) encouraging the United States to avoid political entanglements in Europe\n(C) seeking to promote United States influence throughout Latin America\n(D) encouraging new laws that would give the United States international police power",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 45,
+      "question":"Questions 44–46 refer to the excerpt below.\n“The peace-loving nations must make a concerted effort in opposition to those violations\nof treaties and those ignorings of humane instincts which today are creating a state\nof international anarchy and instability from which there is no escape through mere\nisolation or neutrality.\n“Those who cherish their freedom and recognize and respect the equal right of their\nneighbors to be free and live in peace, must work together for the triumph of law and\nmoral principles in order that peace, justice and confidence may prevail in the world.\nThere must be a return to a belief in the pledged word, in the value of a signed treaty.\nThere must be recognition of the fact that national morality is as vital as private morality.”\nPresident Franklin Roosevelt, Quarantine Speech, 1937\n\n45. The excerpt best reflects an effort by Roosevelt to\n(A) encourage the ratification of the Treaty of Versailles\n(B) promote the acquisition of new territories abroad\n(C) contain the spread of Soviet-dominated communism\n(D) overcome opposition to participation in the impending Second World War",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 46,
+      "question":"Questions 44–46 refer to the excerpt below.\n“The peace-loving nations must make a concerted effort in opposition to those violations\nof treaties and those ignorings of humane instincts which today are creating a state\nof international anarchy and instability from which there is no escape through mere\nisolation or neutrality.\n“Those who cherish their freedom and recognize and respect the equal right of their\nneighbors to be free and live in peace, must work together for the triumph of law and\nmoral principles in order that peace, justice and confidence may prevail in the world.\nThere must be a return to a belief in the pledged word, in the value of a signed treaty.\nThere must be recognition of the fact that national morality is as vital as private morality.”\nPresident Franklin Roosevelt, Quarantine Speech, 1937\n\n46. Which of the following best represents continuity in the years after 1945 with the ideas\nthat Roosevelt expressed in the excerpt?\n(A) The conviction and execution of suspected Soviet spies in the United States\n(B) United States membership in an international collective security organization\n(C) United States military commitment to countries battling communist insurgencies\n(D) The rise of peace organizations opposed to the buildup and use of nuclear weapons",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 47,
+      "question":"Questions 47–49 refer to the poster below.\n\nThe image shows a poster from the Second World War depicting a new role for women in the war effort. A woman is shown, dressed in a white blouse and pants with a scarf tied around her hair. She is wearing gloves and holding a wrench. Behind her is a piece of heavy equipment that she is repairing. The woman is looking over her left shoulder into the distance at an image of a soldier carrying a rifle. At the bottom of the poster is the phrase, \"The Girl He Left Behind\" Is Still Behind Him. On the next line is the phrase, She's a WOW Woman Ordnance Worker.\n\n\n47. The poster most directly reflects the\n(A) wartime mobilization of United States society\n(B) emergence of the United States as a leading world power\n(C) expanded access to consumer goods during wartime\n(D) wartime repression of civil liberties",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 48,
+      "question":"Questions 47–49 refer to the poster below.\n\nThe image shows a poster from the Second World War depicting a new role for women in the war effort. A woman is shown, dressed in a white blouse and pants with a scarf tied around her hair. She is wearing gloves and holding a wrench. Behind her is a piece of heavy equipment that she is repairing. The woman is looking over her left shoulder into the distance at an image of a soldier carrying a rifle. At the bottom of the poster is the phrase, \"The Girl He Left Behind\" Is Still Behind Him. On the next line is the phrase, She's a WOW Woman Ordnance Worker.\n\n\n48. The poster was intended to\n(A) persuade women to enlist in the military\n(B) promote the ideals of republican motherhood\n(C) advocate for the elimination of sex discrimination in employment\n(D) convince women that they had an essential role in the war effort",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 49,
+      "question":"Questions 47–49 refer to the poster below.\n\nThe image shows a poster from the Second World War depicting a new role for women in the war effort. A woman is shown, dressed in a white blouse and pants with a scarf tied around her hair. She is wearing gloves and holding a wrench. Behind her is a piece of heavy equipment that she is repairing. The woman is looking over her left shoulder into the distance at an image of a soldier carrying a rifle. At the bottom of the poster is the phrase, \"The Girl He Left Behind\" Is Still Behind Him. On the next line is the phrase, She's a WOW Woman Ordnance Worker.\n\n49. Which of the following represents a later example of the change highlighted in the poster?\n(A) Feminist calls for equal economic opportunities in the 1970s\n(B) The growing feminist protests against United States military engagements abroad\nin the 1970s\n(C) The increasing inability of the manufacturing sector to create jobs for women in\nthe 1970s and 1980s\n(D) The growing popular consensus about appropriate women’s roles in the 1980s and 1990s",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 50,
+      "question":"Questions 50 and 51 refer to the excerpt below.\n“The era of big government is over but we can’t go back to a time when our citizens were\njust left to fend for themselves. We will meet them by going forward as one America, by\nworking together in our communities, our schools, our churches and synagogues, our\nworkplaces across the entire spectrum of our civic life.”\n\nPresident Bill Clinton, radio address to the nation, 1996\n\n\n50. Which of the following actions by the Clinton administration best reflects the ideas\nabout the scope of government expressed in the excerpt?\n(A) The decision to pursue military peacekeeping interventions in the Balkans and Somalia\n(B) The enactment of welfare reform to restrict benefits and encourage self-reliance\n(C) The negotiation of new free trade agreements among North American countries\n(D) The effort to enact universal health care legislation",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 51,
+      "question":"Questions 50 and 51 refer to the excerpt below.\n“The era of big government is over but we can’t go back to a time when our citizens were\njust left to fend for themselves. We will meet them by going forward as one America, by\nworking together in our communities, our schools, our churches and synagogues, our\nworkplaces across the entire spectrum of our civic life.”\n\nPresident Bill Clinton, radio address to the nation, 1996\n\n\n51. The ideas expressed by Clinton in the excerpt were most similar to those of which\ntwentieth-century president?\n(A) Lyndon Johnson\n(B) Ronald Reagan\n(C) Franklin Roosevelt\n(D) Woodrow Wilson",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 52,
+      "question":"Questions 52–55 refger to the excerpt below.\n“Shortly after this, my mother’s widowed sister, . . . who kept a factory boarding house in\nLowell [Massachusetts], advised her to come to that city. . . .\n“My mother, feeling obliged to have help in her work besides what I could give, and also\nneeding the money which I could earn, allowed me . . . to go to work in the mill. . . .\n“The working hours of all the girls extended from five o’clock in the morning until seven\nin the evening, with one half hour for breakfast and dinner. . . .\n“I cannot tell you how it happened that some of us knew about the English factory\nchildren, who as it was said, were treated so badly. . . .\n“In contrast to this sad picture, we thought of ourselves as well off . . . enjoying ourselves in\nour own good way, with our good mothers and our warm suppers awaiting us.”\nHarriet Hanson Robinson, Loom and Spindle, or Life Among Early Mill Girls,\ndescribing events in the 1830s, published in 1898\n\n\n\n52. Which of the following most directly contributed to the developments described in\nthe excerpt?\n(A) The concept of republican motherhood after the American Revolution\n(B) Large-scale immigration from southern and eastern Europe\n(C) The expansion and increased organization of industrial production\n(D) The wartime need for women to fill jobs previously held by men",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 53,
+      "question":"Questions 52–55 refger to the excerpt below.\n“Shortly after this, my mother’s widowed sister, . . . who kept a factory boarding house in\nLowell [Massachusetts], advised her to come to that city. . . .\n“My mother, feeling obliged to have help in her work besides what I could give, and also\nneeding the money which I could earn, allowed me . . . to go to work in the mill. . . .\n“The working hours of all the girls extended from five o’clock in the morning until seven\nin the evening, with one half hour for breakfast and dinner. . . .\n“I cannot tell you how it happened that some of us knew about the English factory\nchildren, who as it was said, were treated so badly. . . .\n“In contrast to this sad picture, we thought of ourselves as well off . . . enjoying ourselves in\nour own good way, with our good mothers and our warm suppers awaiting us.”\nHarriet Hanson Robinson, Loom and Spindle, or Life Among Early Mill Girls,\ndescribing events in the 1830s, published in 1898\n\n\n\n53. The developments described in the excerpt most directly reflect which of the following\nchanges in the first half of the 1800s?\n(A) The sharp increase in the number of workers making goods for distant markets\n(B) Women’s acquisition of new legal rights independent of their fathers and husbands\n(C) The emergence of a larger and more distinct middle class\n(D) Many women’s embrace of the idea of separate spheres",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 54,
+      "question":"Questions 52–55 refger to the excerpt below.\n“Shortly after this, my mother’s widowed sister, . . . who kept a factory boarding house in\nLowell [Massachusetts], advised her to come to that city. . . .\n“My mother, feeling obliged to have help in her work besides what I could give, and also\nneeding the money which I could earn, allowed me . . . to go to work in the mill. . . .\n“The working hours of all the girls extended from five o’clock in the morning until seven\nin the evening, with one half hour for breakfast and dinner. . . .\n“I cannot tell you how it happened that some of us knew about the English factory\nchildren, who as it was said, were treated so badly. . . .\n“In contrast to this sad picture, we thought of ourselves as well off . . . enjoying ourselves in\nour own good way, with our good mothers and our warm suppers awaiting us.”\nHarriet Hanson Robinson, Loom and Spindle, or Life Among Early Mill Girls,\ndescribing events in the 1830s, published in 1898\n\n\n\n54. Which of the following was a major difference in economic development between the\nNortheast and the South in the first half of the 1800s?\n(A) Southern exports had a far lower value than exports from the Northeast.\n(B) Banking and shipping grew more rapidly in the South than in other regions.\n(C) The South relied much less on wage labor than the Northeast.\n(D) The South had few commercial connections with other regions of the United States.",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 55,
+      "question":"Questions 52–55 refger to the excerpt below.\n“Shortly after this, my mother’s widowed sister, . . . who kept a factory boarding house in\nLowell [Massachusetts], advised her to come to that city. . . .\n“My mother, feeling obliged to have help in her work besides what I could give, and also\nneeding the money which I could earn, allowed me . . . to go to work in the mill. . . .\n“The working hours of all the girls extended from five o’clock in the morning until seven\nin the evening, with one half hour for breakfast and dinner. . . .\n“I cannot tell you how it happened that some of us knew about the English factory\nchildren, who as it was said, were treated so badly. . . .\n“In contrast to this sad picture, we thought of ourselves as well off . . . enjoying ourselves in\nour own good way, with our good mothers and our warm suppers awaiting us.”\nHarriet Hanson Robinson, Loom and Spindle, or Life Among Early Mill Girls,\ndescribing events in the 1830s, published in 1898\n\n\n\n55. Robinson’s assertion that she and the other workers were “well off ” would be\nchallenged during the second half of the nineteenth century by which of the following?\n(A) The growing corporate need for clerical workers that brought many women into\noffice jobs\n(B) Declining household incomes of working families as a result of businesses’\nunwillingness to employ children\n(C) The expanded access to company-sponsored pensions and healthcare for most\nemployees\n(D) Confrontations between unions and factory management over wages and working\nconditions",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    }
+  ]
+}
