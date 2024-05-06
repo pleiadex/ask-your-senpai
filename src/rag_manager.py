@@ -20,11 +20,14 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_community.vectorstores import Chroma
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langgraph.graph import END, StateGraph
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import LLMChainExtractor
+from langchain_cohere import CohereRerank
 
 
 class RAGManager:
 
-    def __init__(self, chroma_path:str, embedding_function, is_web_search_enabled:bool, num_docs: int):
+    def __init__(self, chroma_path:str, embedding_function, is_web_search_enabled:bool, num_docs: int, enable_compression: bool, enable_rerank: bool):
         self.chroma_path = chroma_path
         self.embedding_function = embedding_function
         yes = 'yes'
@@ -33,6 +36,8 @@ class RAGManager:
         self.loop_count = 0
         self.max_loops = 3
         self.num_docs = num_docs
+        self.is_compression_enable = enable_compression
+        self.is_rerank_enable = enable_rerank
 
     
     def build_index(self):
@@ -58,9 +63,22 @@ class RAGManager:
         question = state["question"]
 
         self.build_index()
-
+        
+        if self.is_rerank_enable:
+            print("Rerank")
+            compressor = CohereRerank()
+        else:
+            llm = ChatCohere(model="command-r", temperature=0)
+            compressor = LLMChainExtractor.from_llm(llm=llm)
+            
         # Retrieval
-        documents = self.retriever.invoke(question)
+        if self.is_compression_enable:
+            compression_retriever = ContextualCompressionRetriever(base_retriever=self.retriever, base_compressor=compressor)
+            retriever = compression_retriever
+        else:
+            retriever = self.retriever
+            
+        documents = retriever.invoke(question)
         return {"documents": documents, "question": question}
 
 
@@ -93,7 +111,7 @@ class RAGManager:
         llm_chain = prompt | llm | StrOutputParser()
 
         generation = llm_chain.invoke({"question": question})
-        return {"question": question, "generation": generation}
+        return {"question": question, "generation": generation}        
 
 
     def generate(self, state):

@@ -2,7 +2,9 @@ from constants.answers import YES, NO
 
 LLM_FALLBACK_PREAMBLE = """You are an assistant for advanced placement exam's question-answering tasks. Answer the question based upon your knowledge. Use either A, B, C or D to indicate the correct answer. If you don't know the answer, you must choose the most likely choice among A, B, C, or D! Even if you need more information, you must choose the most likely choice among A, B, C, or D!"""
 
-GENERATE_PREAMBLE = """You are an assistant for advanced placement exam's question-answering tasks. Use the following pieces of retrieved context to answer the question. Use either A, B, C or D to indicate the correct answer. If you don't know the answer, you must choose the most likely choice among A, B, C, or D! Even if you need more information, you must choose the most likely choice among A, B, C, or D!"""
+GENERATE_PREAMBLE_EVAL = """You are an assistant for advanced placement exam's question-answering tasks. Use the following pieces of retrieved context to answer the question. Use either A, B, C or D to indicate the correct answer. If you don't know the answer, you must choose the most likely choice among A, B, C, or D! Even if you need more information, you must choose the most likely choice among A, B, C, or D!"""
+
+GENERATE_PREAMBLE = """You are an assistant for advanced placement exam's question-answering tasks. Use the following pieces of retrieved context to answer the question."""
 
 DOCUMENT_GRADER_PREAMBLE = f"""You are a grader assessing relevance of a retrieved document to a user question. \n
         If the document contains keyword(s) or semantic meaning related to the user question, grade it as relevant. \n
