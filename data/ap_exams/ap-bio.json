@@ -59,7 +59,7 @@
 
         {
             "id":9,
-            "question":"The equation above shows one of the reversible reactions that occur in blood. After exercise, an athlete’s blood pH has dropped below the normal level. How will normal blood pH be restored? (A) An increase in O2 concentration in the plasma will lead to an increase in H+ concentration. (B) An increase in temperature will lead to an increase in H+ concentration. (C) An increase in sweating will lead to a decrease in OH– and H+ concentration. (D) An increase in breathing rate will lead to a decrease in blood CO2 and H+ concentration.",
+            "question":"In 1944 Avery, MacLeod, and McCarty performed transformation experiments using live, harmless bacteria and extracts from virulent bacteria treated with various enzymes. Which of the following enzymes were used and why? (A) Proteases and RNases to rule out protein and RNA as the transforming factors (B) Lipase (an enzyme that facilitates the breakdown of lipids) to rule out lipoproteins as the transforming factor (C) Kinase (an enzyme that facilitates transfer of a phosphate group from ATP to a substrate molecule) to show that transformation is phosphorylation dependent (D) ATPase to show that transformation is not dependent on ATP",
             "answer":"",
             "context": [],
             "ground_truth": "A"
