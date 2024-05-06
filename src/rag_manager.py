@@ -10,6 +10,7 @@ from models.grader_model import GradeDocuments, GradeHallucinations, GradeAnswer
 from models.graph_state import GraphState
 
 # Tools
+from langchain import hub
 from langchain.schema import Document
 from langchain_cohere import ChatCohere
 from langchain_core.prompts import ChatPromptTemplate
@@ -62,14 +63,17 @@ class RAGManager:
         
         if self.is_rerank_enable:
             print("Rerank")
-            compressor = CohereRerank()
+            compressor = CohereRerank(top_n=self.num_docs)
         else:
             llm = ChatCohere(model="command-r", temperature=0)
             compressor = LLMChainExtractor.from_llm(llm=llm)
             
         # Retrieval
         if self.is_compression_enable:
-            compression_retriever = ContextualCompressionRetriever(base_retriever=self.retriever, base_compressor=compressor)
+            compression_retriever = ContextualCompressionRetriever(
+                                        base_retriever=self.retriever, 
+                                        base_compressor=compressor
+                                    )
             retriever = compression_retriever
         else:
             retriever = self.retriever
@@ -455,7 +459,7 @@ class RAGManager:
                 )
             ]
         
-        ) # FIXME: hard-coded since it is time-consuming
+        )
         prompt = prompt_template.format(question=question)
 
         llm = ChatCohere(model="command-r", temperature=0)
@@ -468,3 +472,40 @@ class RAGManager:
         response = chain.invoke(prompt)
 
         return response
+    
+    def get_answer_w_vanilla_rag(self, question: str):
+
+        db = Chroma(
+            persist_directory=self.chroma_path, 
+            embedding_function=self.embedding_function
+        )
+
+        results = db.similarity_search_with_score(question, k=5)
+
+        context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
+
+        prompt_template = ChatPromptTemplate(
+            messages=[
+                HumanMessage(
+                    f"""{VANILLA_RAG_PREAMBLE if not self.is_ap else VANILLA_RAG_PREAMBLE_AP}\n\nContext: {context_text}\n\n Answer this Question: {question}"""
+                )
+            ]
+        
+        )
+        prompt = prompt_template.format(context=context_text, question=question)
+
+        llm = ChatCohere(model="command-r", temperature=0)
+
+        chain = (
+            llm |
+            StrOutputParser()
+        )
+
+        response = chain.invoke(prompt)
+
+        sources = [f'{doc.metadata.get("id", None)}:{_score}' for doc, _score in results]
+
+        contexts = [doc.page_content for doc, _ in results]
+
+
+        return response, sources, contexts

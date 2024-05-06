@@ -1,0 +1,56 @@
+id, answer, ground_truth
+1, D B C A E C B A D, C
+2, D B E C A D B A E A B, B
+3, D, D
+4, B, B
+5, C, C
+6, B, B
+7, B, B
+8, D B C E D A E B C D E A E A, A
+9, A  C  B  B  B  A  D, C
+10, A, A
+11, 1. C 2. B 3. C 4. B 5. E 6. D 7. A 8. D 9. E 10. B 11. D 12. A 13. C 14. D, D
+12, D, D
+13, A, A
+14, D, D
+15, B D C B E A B B D C, D
+16, B B a) Jim Crow Laws b) Industrial education c) Industrialization of the South D E D A B A B A B C A, A
+17, C, A
+18, C D A D C, D
+19, 1. B 2. A 3. D 4. C 5. E 6. B 7. B 8. E 9. E 10. C 11. B 12. D 13. A 14. C 15. B, B
+20, C D A D E B B D C D B A D E D E A, A
+21, E A C D D B B A C D B E D C A, D
+22, C, C
+23, A, A
+24, D, C
+25, A. C. B. A. A. Operation Desert Storm politically impacted foreign policy by demonstrating American military power and strategic importance in the Middle East, especially regarding access to oil resources. B. Many voters viewed the impeachment of Bill Clinton as a politically motivated attack, believing it was driven by personal disagreements and not legitimate concerns about legal violations. The public nature of the impeachment proceedings also contributed to the perception of it being a partisan attack, fostering sympathy for Clinton among some voters. C. The foreign policy shift away from isolationism, emphasizing disarmament and peace initiatives, while actively pursuing American interests. A. Roosevelt's support for the Spanish-American War and subsequent acquisition of overseas territories, demonstrating imperialist ambitions. B. Roosevelt's successful negotiation of the Russo-Japanese War peace treaty, showcasing his diplomatic skills and strategic thinking. C. Changing perceptions of Roosevelt's legacy due to evolving historical evaluations of his policies and their long-term impacts, re-evaluating him as a pragmatic leader who balanced idealism with realism. A. The growing economic and commercial ties between the two countries, leading to increased cooperation and mutual benefits. D., C
+26, B, A
+27, D B C E D E D A D, D
+28, D  11. B  12. A  13. A  3. A  4. C  5. E  2a. fear of religious persecution  2b. Ireland  2c. the increasing presence of the English navy  19. C  21. C  22. A  23. C  24. E  25. A, A
+29, A B C D A B D C B D A C B, B
+30, D C E A E B B A 3 C A, C
+31, C, A
+32, C, C
+33, D, B
+34, B, D
+35, C, C
+36, B, B
+37, B, B
+38, A, A
+39, C B C, C
+40, A B D E B D A D, A
+41, D, C
+42, B, B
+43, B, C
+44, A, A
+45, D, D
+46, B, B
+47, A, A
+48, D, D
+49, A, A
+50, D B  A D C B D C D A D D, B
+51, A. B. D., B
+52, C, C
+53, A, A
+54, A, C
+55, D, D

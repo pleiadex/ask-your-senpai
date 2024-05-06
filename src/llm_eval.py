@@ -8,7 +8,7 @@ load_dotenv()
 
 
 # initialize the dataset
-subjects = ['us_history']
+subjects = ['biology'] #, 'macro_economics', 'psychology'] #['us_history', 'world_history', 
 
 total_results = {}
 
@@ -20,7 +20,7 @@ for subject in subjects:
         'ground_truth': []
     }
 
-    with open(f'./data/ap_exams/{subject}_full.json') as f:
+    with open(f'./data/ap_exams/{subject}.json') as f:
         data = json.load(f)
         for i, item in enumerate(data['qa-dataset']):
             response = RAGManager.get_answer_wo_rag(item['question'], True)
@@ -42,7 +42,7 @@ for subject in subjects:
                 output_file.write("id, answer, ground_truth\n")
               
               # write response and ground truth to the output file
-              output_file.write(f"{i + 1}, {response}, {item['ground_truth']}\n")
+              output_file.write(f"{item['id']}, {response}, {item['ground_truth']}\n")
 
 
     # save qa_dataset to a json file

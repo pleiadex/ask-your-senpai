@@ -78,7 +78,7 @@ def main():
             st.markdown(message["content"])
 
             # expandable sections for sources
-            if "contexts" in message and len(message["contexts"]) > 0:
+            if "contexts" in message and message["contexts"] is not None and len(message["contexts"]) > 0:
                 expander = st.expander("See the references")
                 for context in message["contexts"]:
                     expander.write(context)

@@ -1,0 +1,390 @@
+{
+  "subject": "World History",
+  "qa-dataset": [
+    {
+      "id": 1,
+      "question": "Questions 1–3 refer to the passage below.\n“And if you, my vassal, disobey or break this treaty, may the god Adad, the canal inspector\nof heaven and earth, put an end to all vegetation in your land. May his waters hit your\nland with a severe destructive downpour. May locusts devour your crops. May there be\nno sound of grinding stone in your houses. May the wild animals eat your bread, and may\nyour spirit have no one to take care of it and pour offerings of wine for it.”\n\nExcerpt from a treaty between an Assyrian king and the ruler of a\nsubject city-state in northwestern Iran, circa 670 b.c.e.\n\n\n\n1. The particular consequences invoked in the ritual curse in the treaty most strongly\nsupport which of the following statements about ancient Mesopotamia?\n(A) States’ legitimacy was based on claims to secular authority.\n(B) Ongoing environmental degradation occurred as a byproduct of the spread of\npastoralism.\n(C) Maintaining and expanding agricultural production was seen as a core task of\ngovernments.\n(D) The domestication of plants occurred before the domestication of animals.",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 2,
+      "question": "Questions 1–3 refer to the passage below.\n“And if you, my vassal, disobey or break this treaty, may the god Adad, the canal inspector\nof heaven and earth, put an end to all vegetation in your land. May his waters hit your\nland with a severe destructive downpour. May locusts devour your crops. May there be\nno sound of grinding stone in your houses. May the wild animals eat your bread, and may\nyour spirit have no one to take care of it and pour offerings of wine for it.”\n\nExcerpt from a treaty between an Assyrian king and the ruler of a\nsubject city-state in northwestern Iran, circa 670 b.c.e.\n\n\n\n2. A historian would most likely use this passage in the treaty to illustrate which of the\nfollowing?\n(A) The precarious nature of early civilizations’ relationship to their physical environment\n(B) The negative effect of overpopulation on urban sanitation and health\n(C) The emergence of social hierarchies supported by unequal distribution of surplus food\n(D) The nutritional deficiencies suffered by early agricultural populations",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 3,
+      "question": "Questions 1–3 refer to the passage below.\n“And if you, my vassal, disobey or break this treaty, may the god Adad, the canal inspector\nof heaven and earth, put an end to all vegetation in your land. May his waters hit your\nland with a severe destructive downpour. May locusts devour your crops. May there be\nno sound of grinding stone in your houses. May the wild animals eat your bread, and may\nyour spirit have no one to take care of it and pour offerings of wine for it.”\n\nExcerpt from a treaty between an Assyrian king and the ruler of a\nsubject city-state in northwestern Iran, circa 670 b.c.e.\n\n\n\n3. Which of the following was an important long-term effect of the expansion of the\nAssyrian Empire?\n(A) The diffusion of monotheistic religious beliefs to East Asia\n(B) The development of the Greek alphabet\n(C) The initial diffusion of advanced mathematical knowledge, such as algebra and\ntrigonometry\n(D) The establishment of Jewish diasporic communities as a result of Assyrian military\nconquest",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 4,
+      "question": "Questions 4–6 refer to the passage below.\n“Marriage precedes all other duties of life. The different kinds of marriage are:\n• the giving in marriage of a bride with a dowry . . .\n• the giving in marriage of a bride in exchange for a couple of cows\n• the giving in marriage of a bride to a priest\n• the voluntary union of a maiden and her lover\n• the giving in marriage of a bride after receiving plenty of wealth from the groom’s family\nOf these, the first three are ancestral customs of old and are valid on their being approved of\nby the father of the bride. The rest are to be sanctioned by both the father and the mother. . . .\nAny kind of marriage [that meets the above conditions] is approvable. . . .\nSons begotten by men of higher caste and women of lower caste are considered to be of\nmixed caste. Sons begotten by men of lower caste and women of higher caste originate on\naccount of kings violating all norms of proper behavior.”\n\nArthashastra, a legal and political treatise produced for Chandragupta,\na Hindu ruler of the Mauryan dynasty in India, circa 300 b.c.e.\n\n\n4. Compared to the regulations in the excerpt, Buddhist practices concerning gender roles\nin the period 600 c.e. to 600 b.c.e. differed in that they\n(A) rejected the validity of marriage as an institution\n(B) offered women and men the possibility of monastic life as an alternative to marriage\n(C) gave the bride’s mother, rather than the father, the primary role in making marriage\ndecisions\n(D) asserted that only marriages based on the free choice of both spouses were valid",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 5,
+      "question": "Questions 4–6 refer to the passage below.\n“Marriage precedes all other duties of life. The different kinds of marriage are:\n• the giving in marriage of a bride with a dowry . . .\n• the giving in marriage of a bride in exchange for a couple of cows\n• the giving in marriage of a bride to a priest\n• the voluntary union of a maiden and her lover\n• the giving in marriage of a bride after receiving plenty of wealth from the groom’s family\nOf these, the first three are ancestral customs of old and are valid on their being approved of\nby the father of the bride. The rest are to be sanctioned by both the father and the mother. . . .\nAny kind of marriage [that meets the above conditions] is approvable. . . .\nSons begotten by men of higher caste and women of lower caste are considered to be of\nmixed caste. Sons begotten by men of lower caste and women of higher caste originate on\naccount of kings violating all norms of proper behavior.”\n\nArthashastra, a legal and political treatise produced for Chandragupta,\na Hindu ruler of the Mauryan dynasty in India, circa 300 b.c.e.\n\n\n5. The views expressed in the excerpt are best seen as evidence of which of the following\nin Mauryan society?\n(A) The persistence of patriarchy\n(B) The absence of inter-caste marriages\n(C) The social acceptance of children born out of wedlock\n(D) The rulers’ lax enforcement of religious doctrine",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 6,
+      "question": "Questions 4–6 refer to the passage below.\n“Marriage precedes all other duties of life. The different kinds of marriage are:\n• the giving in marriage of a bride with a dowry . . .\n• the giving in marriage of a bride in exchange for a couple of cows\n• the giving in marriage of a bride to a priest\n• the voluntary union of a maiden and her lover\n• the giving in marriage of a bride after receiving plenty of wealth from the groom’s family\nOf these, the first three are ancestral customs of old and are valid on their being approved of\nby the father of the bride. The rest are to be sanctioned by both the father and the mother. . . .\nAny kind of marriage [that meets the above conditions] is approvable. . . .\nSons begotten by men of higher caste and women of lower caste are considered to be of\nmixed caste. Sons begotten by men of lower caste and women of higher caste originate on\naccount of kings violating all norms of proper behavior.”\n\nArthashastra, a legal and political treatise produced for Chandragupta,\na Hindu ruler of the Mauryan dynasty in India, circa 300 b.c.e.\n\n\n6. Which of the following changes to Mauryan religious policy occurred under\nChandragupta’s grandson, Emperor Ashoka?\n(A) The emergence of a syncretic Indo-Greek system of religious belief\n(B) The secularization of the Mauryan state\n(C) The promotion of Buddhist teachings through edicts by the ruler\n(D) The establishment of Islam as the dominant religion of northern India",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 7,
+      "question": "Questions 7–9 refer to the passage below.\n“The ruler is a boat; people are the water. The water can carry the boat; the water can\ncapsize the boat. . . . A man may be the descendant of kings, lords, or nobles, but if he does\nnot observe the norms of ritual and proper behavior he must be relegated to the status\nof a commoner. Similarly, he may be a descendant of commoners, but if he accumulates\nlearning of the texts, corrects his behavior, and observes the norms of ritual and proper\nbehavior—then he must be elevated to the ranks of high ministers, lords, and nobles.”\nXunzi, Chinese philosopher, circa 250 b.c.e.\n\n\n7. According to the passage, Xunzi was advocating an approach to governance that most\nclearly reflected the principles of\n(A) Daoism\n(B) Legalism\n(C) Confucianism\n(D) Buddhism",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 8,
+      "question":"Questions 7–9 refer to the passage below.\n“The ruler is a boat; people are the water. The water can carry the boat; the water can\ncapsize the boat. . . . A man may be the descendant of kings, lords, or nobles, but if he does\nnot observe the norms of ritual and proper behavior he must be relegated to the status\nof a commoner. Similarly, he may be a descendant of commoners, but if he accumulates\nlearning of the texts, corrects his behavior, and observes the norms of ritual and proper\nbehavior—then he must be elevated to the ranks of high ministers, lords, and nobles.”\nXunzi, Chinese philosopher, circa 250 b.c.e.\n\n\n8. Xunzi’s idealized vision of Chinese society in the passage differs most strongly from the\nsocial structure of which of the following?\n(A) Roman society during the late empire\n(B) Hindu society in South Asia during the Gupta Empire\n(C) Muslim society during the early Caliphates\n(D) Mongol society during the period of Mongol conquests",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 9,
+      "question":"Questions 7–9 refer to the passage below.\n“The ruler is a boat; people are the water. The water can carry the boat; the water can\ncapsize the boat. . . . A man may be the descendant of kings, lords, or nobles, but if he does\nnot observe the norms of ritual and proper behavior he must be relegated to the status\nof a commoner. Similarly, he may be a descendant of commoners, but if he accumulates\nlearning of the texts, corrects his behavior, and observes the norms of ritual and proper\nbehavior—then he must be elevated to the ranks of high ministers, lords, and nobles.”\nXunzi, Chinese philosopher, circa 250 b.c.e.\n\n\n9. Ideas similar to those expressed in the passage have directly contributed to the\ndevelopment of which of the following aspects of later Chinese imperial history?\n(A) The long-standing tradition of Chinese leadership in technological, agricultural,\nand commercial innovation relative to the rest of the world\n(B) The expectation that emperors must be judged by a different set of ethical\nstandards all other members of society\n(C) The virtual elimination of the threat of rebellion against established political authority\n(D) The practice of recruiting capable bureaucrats on the basis of educational\nachievement rather than noble birth",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 10,
+      "question": "Questions 10–12 refer to the graph below.\n\nPERCENTAGE OF VILLAGES DEPOPULATED IN\nTHE WESTERN ROMAN EMPIRE, 400 TO 500 C.E.\n\nData adapted from David C. Baker, “The Roman Dominate from the Perspective of Demographic-Structural Theory,”\nCliodynamics, Vol. 2, 2011\n\n10. Which of the following best explains the overall demographic trend shown in the chart?\n(A) The spread of the bubonic plague by the Mongol invasions\n(B) Migrations to Christian population centers in the Mediterranean\n(C) Forced migration of populations by the Roman government\n(D) Invasions by Germanic and Central Asian peoples",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 11,
+      "question":"Questions 10–12 refer to the graph below.\n\nPERCENTAGE OF VILLAGES DEPOPULATED IN\nTHE WESTERN ROMAN EMPIRE, 400 TO 500 C.E.\n\nData adapted from David C. Baker, “The Roman Dominate from the Perspective of Demographic-Structural Theory,”\nCliodynamics, Vol. 2, 2011\n\n11. Which of the following best describes the Roman response to the trend shown on the chart?\n(A) Shifting power and resources to the east, eventually resulting in the creation of the\nByzantine Empire\n(B) Sponsoring the further development of commercial infrastructure, particularly roads\n(C) Adopting Christianity as the official religion of the Roman Empire, under the\nemperor Constantine\n(D) Building an elaborate system of fortifications along the northern frontier, such as\nHadrian’s Wall",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 12,
+      "question":"Questions 10–12 refer to the graph below.\n\nPERCENTAGE OF VILLAGES DEPOPULATED IN\nTHE WESTERN ROMAN EMPIRE, 400 TO 500 C.E.\n\nData adapted from David C. Baker, “The Roman Dominate from the Perspective of Demographic-Structural Theory,”\nCliodynamics, Vol. 2, 2011\n\n\n\n12. Which of the following emerged in western Europe after 500 c.e. in large part as a\nreaction to the changes illustrated by the chart?\n(A) The development of cash crop plantations relying on slave labor\n(B) The binding of peasants to the land as part of the development of feudal society\n(C) The shift from agriculture to nomadic pastoralism in most of western Europe\n(D) The development of self-governing professional guilds",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 13,
+      "question":"Questions 13–15 refer to the two tables below.\nTable 1\nORIGIN OF THE COINS IN A BURIED CACHE FROM CIRCA 750 C.E., FOUND NEAR\nXI’AN, CENTRAL CHINA\nOrigin of the Coins | Date of the Coins (approximate)| Number of Coins\nChinese, pre-dating the Tang dynasty | 500 b.c.e.–550 c.e. | 19\nEarly Tang dynasty | 600–750 c.e. | 451\nSassanian dynasty, Persia | 600 c.e. | 1\nByzantine Empire | 600 c.e. | 1\nCity of Turfan, Central Asia | 650 c.e. | 1\nJapan, Nara period | 710 c.e. | 5\nTOTAL | | 478\n\n\nTable 2\nORIGINS OF THE COINS IN A VIKING BURIED CACHE FROM CIRCA 900 C.E., FOUND IN\nNORTHWESTERN ENGLAND\nOrigin of the Coins | Number of Coins (approximate)\nViking kingdoms in northern England | 5,000\nAnglo-Saxon kingdoms in southern England | 1,000\nCarolingian Frankish Empire | 1,000\nViking states in Scandinavia | 50\nAbbasid Caliphate | 50\nPapacy and Northern Italian states | 20\nByzantine Empire |1\nTOTAL | 7,200\n---------------------------------------------------\n\n\n13. Which of the following conclusions is best supported by the data in Table 1\n(A) The Tang emperors’ legitimacy continued to be challenged in many parts of China.\n(B) The great majority of economic transactions in Tang China continued to be carried\nout through barter.\n(C) Long-distance trade resulted in the establishment of new cities and diasporic\nmerchant communities.\n(D) Long-distance trade routes were active during the early Tang period, even as most\ntrade in China remained local.",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 14,
+      "question":"Questions 13–15 refer to the two tables below.\nTable 1\nORIGIN OF THE COINS IN A BURIED CACHE FROM CIRCA 750 C.E., FOUND NEAR\nXI’AN, CENTRAL CHINA\nOrigin of the Coins | Date of the Coins (approximate)| Number of Coins\nChinese, pre-dating the Tang dynasty | 500 b.c.e.–550 c.e. | 19\nEarly Tang dynasty | 600–750 c.e. | 451\nSassanian dynasty, Persia | 600 c.e. | 1\nByzantine Empire | 600 c.e. | 1\nCity of Turfan, Central Asia | 650 c.e. | 1\nJapan, Nara period | 710 c.e. | 5\nTOTAL | | 478\n\n\nTable 2\nORIGINS OF THE COINS IN A VIKING BURIED CACHE FROM CIRCA 900 C.E., FOUND IN\nNORTHWESTERN ENGLAND\nOrigin of the Coins | Number of Coins (approximate)\nViking kingdoms in northern England | 5,000\nAnglo-Saxon kingdoms in southern England | 1,000\nCarolingian Frankish Empire | 1,000\nViking states in Scandinavia | 50\nAbbasid Caliphate | 50\nPapacy and Northern Italian states | 20\nByzantine Empire |1\nTOTAL | 7,200\n---------------------------------------------------\n\n\n14. A historian researching the economic history of Eurasia in the period circa\n600–1450 c.e. would most likely find the two tables useful as a source of information\nabout which of the following?\n(A) The diffusion of cultural traditions along Eurasian trade routes\n(B) The spread of technological innovations across regions in Eurasia\n(C) The geographic extent of the monetization of Eurasian economies\n(D) The extent to which government economic policies in Eurasia in the\nperiod 600–1450 represented a continuity of earlier policies",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 15,
+      "question":"Questions 13–15 refer to the two tables below.\nTable 1\nORIGIN OF THE COINS IN A BURIED CACHE FROM CIRCA 750 C.E., FOUND NEAR\nXI’AN, CENTRAL CHINA\nOrigin of the Coins | Date of the Coins (approximate)| Number of Coins\nChinese, pre-dating the Tang dynasty | 500 b.c.e.–550 c.e. | 19\nEarly Tang dynasty | 600–750 c.e. | 451\nSassanian dynasty, Persia | 600 c.e. | 1\nByzantine Empire | 600 c.e. | 1\nCity of Turfan, Central Asia | 650 c.e. | 1\nJapan, Nara period | 710 c.e. | 5\nTOTAL | | 478\n\n\nTable 2\nORIGINS OF THE COINS IN A VIKING BURIED CACHE FROM CIRCA 900 C.E., FOUND IN\nNORTHWESTERN ENGLAND\nOrigin of the Coins | Number of Coins (approximate)\nViking kingdoms in northern England | 5,000\nAnglo-Saxon kingdoms in southern England | 1,000\nCarolingian Frankish Empire | 1,000\nViking states in Scandinavia | 50\nAbbasid Caliphate | 50\nPapacy and Northern Italian states | 20\nByzantine Empire |1\nTOTAL | 7,200\n---------------------------------------------------\n\n\n15. The data presented in the two tables best support which of the following comparative\nstatements about Tang China and Viking England?\n(A) Elites in Tang China were less wealthy than elites in Viking England.\n(B) Merchants stood at the top of the social hierarchies in both Tang China and Viking\nEngland.\n(C) Tang coins were typically of greater value than coins in Viking England.\n(D) Coinage was seen as a useful means of storing value in both Tang China and\nViking England.",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 16,
+      "question": "Questions 16–18 refer to the passage below.\n“At that time, great disturbances erupted among the lower ranks of people, by which\nEngland was nearly ruined. Never was a country in such jeopardy, and all because some\ncommoners sought to claim liberties to which they were not entitled. It is customary\nin England, as in other countries, for the nobility to have great privileges over the\ncommoners, who are bound by law and custom to plow the lands of nobles, harvest the\ngrain, carry it to the barn, and perform various other services for their lords.\nThe evil-disposed in these districts began to rise, saying they were too severely oppressed;\nthat at the beginning of the world there were no unfree people, and that no one ought to be\ntreated as such, unless he had committed treason against his lord, as Lucifer had done against\nGod: but they had done no such thing, for they were men formed after the same likeness as\ntheir lords, who treated them like beasts. They could no longer bear this, and wanted to be\nfree. And if they were to do any work for their lords, they demanded to be paid for it.”\nJean Froissart, French chronicler, late 1300s\n\n-------------------------------------------------------\n\n16. The events described in the passage represent a reaction against which of the following\nforms of coerced labor?\n(A) Slavery\n(B) Military conscription\n(C) Indentured servitude\n(D) Serfdom",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 17,
+      "question":"Questions 16–18 refer to the passage below.\n“At that time, great disturbances erupted among the lower ranks of people, by which\nEngland was nearly ruined. Never was a country in such jeopardy, and all because some\ncommoners sought to claim liberties to which they were not entitled. It is customary\nin England, as in other countries, for the nobility to have great privileges over the\ncommoners, who are bound by law and custom to plow the lands of nobles, harvest the\ngrain, carry it to the barn, and perform various other services for their lords.\nThe evil-disposed in these districts began to rise, saying they were too severely oppressed;\nthat at the beginning of the world there were no unfree people, and that no one ought to be\ntreated as such, unless he had committed treason against his lord, as Lucifer had done against\nGod: but they had done no such thing, for they were men formed after the same likeness as\ntheir lords, who treated them like beasts. They could no longer bear this, and wanted to be\nfree. And if they were to do any work for their lords, they demanded to be paid for it.”\nJean Froissart, French chronicler, late 1300s\n\n-------------------------------------------------------\n\n17. English nobles resisted peasant demands such as those described in the passage\nbecause agricultural labor in many parts of fourteenth-century Afro-Eurasia had\nbecome scarce as a result of which of the following developments?\n(A) The migration of peasants to cities in search of industrial employment\n(B) Significant increase in mortality due to the spread of epidemic diseases\n(C) The development of wage-based economies with the emergence of capitalism\n(D) Widespread famine resulting from rising global temperatures",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 18,
+      "question":"Questions 16–18 refer to the passage below.\n“At that time, great disturbances erupted among the lower ranks of people, by which\nEngland was nearly ruined. Never was a country in such jeopardy, and all because some\ncommoners sought to claim liberties to which they were not entitled. It is customary\nin England, as in other countries, for the nobility to have great privileges over the\ncommoners, who are bound by law and custom to plow the lands of nobles, harvest the\ngrain, carry it to the barn, and perform various other services for their lords.\nThe evil-disposed in these districts began to rise, saying they were too severely oppressed;\nthat at the beginning of the world there were no unfree people, and that no one ought to be\ntreated as such, unless he had committed treason against his lord, as Lucifer had done against\nGod: but they had done no such thing, for they were men formed after the same likeness as\ntheir lords, who treated them like beasts. They could no longer bear this, and wanted to be\nfree. And if they were to do any work for their lords, they demanded to be paid for it.”\nJean Froissart, French chronicler, late 1300s\n\n-------------------------------------------------------\n\n18. All of the following statements are factually accurate. Which most likely explains\nFroissart’s view of the peasants’ grievances discussed in the passage?\n(A) Even though he was French, Froissart traveled to England to collect information\nfor his chronicles.\n(B) Peasant revolts were fairly common in medieval Europe.\n(C) History writing in medieval Europe was aimed primarily at elite audiences.\n(D) In addition to his chronicles, Froissart wrote a work of romance based on the\nlegend of King Arthur.",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 19,
+      "question": "\nQuestions 19–22 refer to the maps below.\nTYPICAL SAILING ROUTES AND SCHEDULES OF OMANI MERCHANTS TRAVELING TO\n\nEAST AFRICA AND CHINA FROM MUSCAT, CIRCA 1400 C.E.\n\n\n\n-------------------------------------------------------\n19. The particular routes and timings of the voyages depicted on the maps best reflect\nwhich of the following characteristics of Omani merchants?\n(A) Their Islamic ritual observances, which made travel difficult during the fasting\nperiod of Ramadan\n(B) Their advanced knowledge of Indian Ocean currents and monsoon wind patterns\n(C) Their need to avoid the routes traveled by the faster and better-armed Portuguese\ntrading ships\n(D) Their control of the sources of grain needed by Chinese and East African cities",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 20,
+      "question":"\nQuestions 19–22 refer to the maps below.\nTYPICAL SAILING ROUTES AND SCHEDULES OF OMANI MERCHANTS TRAVELING TO\n\nEAST AFRICA AND CHINA FROM MUSCAT, CIRCA 1400 C.E.\n\n\n\n-------------------------------------------------------\n20. Based on the maps and your knowledge of world history, which of the following best\ndescribes the effect of the spread of Islam on Indian Ocean trade?\n(A) It led to the expansion and intensification of commerce along already existing\ntrade routes.\n(B) It led to the disappearance of previously established trade networks.\n(C) It led to an expansion of land-based caravan trade but also to a decline of\nmaritime trade.\n(D) It led to the first creation of trade links between previously isolated world regions.",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 21,
+      "question":"Questions 19–22 refer to the maps below.\nTYPICAL SAILING ROUTES AND SCHEDULES OF OMANI MERCHANTS TRAVELING TO\n\nEAST AFRICA AND CHINA FROM MUSCAT, CIRCA 1400 C.E.\n\n\n\n-------------------------------------------------------\n21. Which of the following factors contributed the most to Omani traders’ ability to\nundertake the voyages depicted on the maps?\n(A) The strong backing for the voyages by the Caliphate\n(B) Navigational and maritime innovations, such as the astrolabe and lateen sail\n(C) The spread of Arabic as the language of commerce in the Red Sea and western\nIndian Ocean basins\n(D) Innovations in agriculture, which allowed the Omani population to increase rapidly",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 22,
+      "question":"Questions 19–22 refer to the maps below.\nTYPICAL SAILING ROUTES AND SCHEDULES OF OMANI MERCHANTS TRAVELING TO\n\nEAST AFRICA AND CHINA FROM MUSCAT, CIRCA 1400 C.E.\n\n\n\n-------------------------------------------------------\n22. Which of the following could be best inferred about the South and East Asian trading\ncities shown on the maps?\n(A) They were under the direct political control of Oman.\n(B) They had a majority Arab population.\n(C) They had Muslim diasporic merchant communities.\n(D) They were primarily sources of slave labor for the Omanis.",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 23,
+      "question":"Questions 23–26 refer to the two diagrams below.\n\nAmericas\nExport: 302 Tons\nUse: 66 Tons\n\nWestern Europe\nImport: 158 Tons\nRe-export: 110 Tons\n\nEast and South Asia\nImport: 109 Tons\n\n268 Tons\n\nSouthern African Route\n16 Tons\n94\nTons\n\nThe Pacific Route\n34 Tons\n\nRest of Europe\nand the Middle East\nImport: 94 Tons\n\nJapan\nExport: 59 Tons\nUse: Unknown\n59 Tons\nWORLD SILVER FLOWS, 1600–1650 C.E., METRIC TONS PER YEAR (average)\n\nAmericas\nExport: 533 Tons\nUse: 117 Tons\n\nWestern Europe\nImport: 230 Tons\nRe-export: 270 Tons\n\nEast and South Asia\nImport: 193 Tons\n\n500 Tons\n\nSouthern African Route\n160 Tons\n110\nTons Rest of Europe\nand the Middle East\nImport: 110 Tons\n\nJapan\nExport: 0 Tons\nUse: Unknown\n0 Tons\nWORLD SILVER FLOWS, 1725–1750 C.E., METRIC TONS PER YEAR (average)\n\nThe Pacific Route\n33 Tons\n\nSource: Ronald Findlay and Kevin H. O’Rourke, Power and Plenty: Trade, War, and the World Economy in the Second\nMillennium, Princeton University Press, 2007, p. 218.\n\n\n\n-------------------------------------------------------\n23. Which of the following economic conditions was most important in creating the global\ntrade network illustrated by the two diagrams?\n(A) American demand for labor and African supply of slaves\n(B) Japanese supply of silver and Middle Eastern demand for spices\n(C) Western European demand for industrial raw materials and American and South\nAsian supply of cash crops\n(D) Chinese and Indian demand for precious metals and European demand for Asian\ntextiles and luxury goods",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 24,
+      "question":"Questions 23–26 refer to the two diagrams below.\n\nAmericas\nExport: 302 Tons\nUse: 66 Tons\n\nWestern Europe\nImport: 158 Tons\nRe-export: 110 Tons\n\nEast and South Asia\nImport: 109 Tons\n\n268 Tons\n\nSouthern African Route\n16 Tons\n94\nTons\n\nThe Pacific Route\n34 Tons\n\nRest of Europe\nand the Middle East\nImport: 94 Tons\n\nJapan\nExport: 59 Tons\nUse: Unknown\n59 Tons\nWORLD SILVER FLOWS, 1600–1650 C.E., METRIC TONS PER YEAR (average)\n\nAmericas\nExport: 533 Tons\nUse: 117 Tons\n\nWestern Europe\nImport: 230 Tons\nRe-export: 270 Tons\n\nEast and South Asia\nImport: 193 Tons\n\n500 Tons\n\nSouthern African Route\n160 Tons\n110\nTons Rest of Europe\nand the Middle East\nImport: 110 Tons\n\nJapan\nExport: 0 Tons\nUse: Unknown\n0 Tons\nWORLD SILVER FLOWS, 1725–1750 C.E., METRIC TONS PER YEAR (average)\n\nThe Pacific Route\n33 Tons\n\nSource: Ronald Findlay and Kevin H. O’Rourke, Power and Plenty: Trade, War, and the World Economy in the Second\nMillennium, Princeton University Press, 2007, p. 218.\n\n\n\n-------------------------------------------------------\n24. In the eighteenth century, which of the following contributed most directly to the\nchange in the volume of silver trade on the Southern African route?\n(A) The development of new types of ships, such as the caravel and the carrack\n(B) The expanded activities of chartered and joint-stock companies\n(C) The conversion of the rulers of west African states to Christianity\n(D) The discovery of gold and diamonds in southern Africa",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 25,
+      "question":"Questions 23–26 refer to the two diagrams below.\n\nAmericas\nExport: 302 Tons\nUse: 66 Tons\n\nWestern Europe\nImport: 158 Tons\nRe-export: 110 Tons\n\nEast and South Asia\nImport: 109 Tons\n\n268 Tons\n\nSouthern African Route\n16 Tons\n94\nTons\n\nThe Pacific Route\n34 Tons\n\nRest of Europe\nand the Middle East\nImport: 94 Tons\n\nJapan\nExport: 59 Tons\nUse: Unknown\n59 Tons\nWORLD SILVER FLOWS, 1600–1650 C.E., METRIC TONS PER YEAR (average)\n\nAmericas\nExport: 533 Tons\nUse: 117 Tons\n\nWestern Europe\nImport: 230 Tons\nRe-export: 270 Tons\n\nEast and South Asia\nImport: 193 Tons\n\n500 Tons\n\nSouthern African Route\n160 Tons\n110\nTons Rest of Europe\nand the Middle East\nImport: 110 Tons\n\nJapan\nExport: 0 Tons\nUse: Unknown\n0 Tons\nWORLD SILVER FLOWS, 1725–1750 C.E., METRIC TONS PER YEAR (average)\n\nThe Pacific Route\n33 Tons\n\nSource: Ronald Findlay and Kevin H. O’Rourke, Power and Plenty: Trade, War, and the World Economy in the Second\nMillennium, Princeton University Press, 2007, p. 218.\n\n\n\n-------------------------------------------------------\n25. Which of the following was an important direct effect on Europe of the processes\nreflected in the diagrams?\n(A) The independence movements in Spanish and Portuguese colonies\n(B) The industrialization of parts of England, France, and Germany\n(C) The intensification of state rivalries over control of trade routes, leading to colonial wars\n(D) Religious conflicts between Catholics and Protestants",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 26,
+      "question":"Questions 23–26 refer to the two diagrams below.\n\nAmericas\nExport: 302 Tons\nUse: 66 Tons\n\nWestern Europe\nImport: 158 Tons\nRe-export: 110 Tons\n\nEast and South Asia\nImport: 109 Tons\n\n268 Tons\n\nSouthern African Route\n16 Tons\n94\nTons\n\nThe Pacific Route\n34 Tons\n\nRest of Europe\nand the Middle East\nImport: 94 Tons\n\nJapan\nExport: 59 Tons\nUse: Unknown\n59 Tons\nWORLD SILVER FLOWS, 1600–1650 C.E., METRIC TONS PER YEAR (average)\n\nAmericas\nExport: 533 Tons\nUse: 117 Tons\n\nWestern Europe\nImport: 230 Tons\nRe-export: 270 Tons\n\nEast and South Asia\nImport: 193 Tons\n\n500 Tons\n\nSouthern African Route\n160 Tons\n110\nTons Rest of Europe\nand the Middle East\nImport: 110 Tons\n\nJapan\nExport: 0 Tons\nUse: Unknown\n0 Tons\nWORLD SILVER FLOWS, 1725–1750 C.E., METRIC TONS PER YEAR (average)\n\nThe Pacific Route\n33 Tons\n\nSource: Ronald Findlay and Kevin H. O’Rourke, Power and Plenty: Trade, War, and the World Economy in the Second\nMillennium, Princeton University Press, 2007, p. 218.\n\n\n\n-------------------------------------------------------\n26. Which of the following was an important continuity underlying the trade interactions\nillustrated by the two diagrams?\n(A) The resilience of the Chinese economy, despite the dynastic change from Ming\nto Qing\n(B) The industrial and commercial supremacy of Great Britain in western Europe\n(C) The widespread acceptance of the principles of free trade by most European and\nAsian governments\n(D) The ongoing expansion of Muslim empires, such as the Ottoman and the Safavid",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 27,
+      "question":"Questions 27–29 refer to the image below.\n\nThe image shows a seventeenth-century Ethiopian painting depicting the Virgin Mary holding the Christ Child in her arms. A merchant is lying below them. The faces of two other figures appear to be watching from behind.\n\nThe image above, from seventeenth-century Ethiopia, shows the Virgin Mary and Christ Child\nwith the merchant who commissioned the painting lying below.\n\n-----------------------------------\n27. The painting is best seen as evidence for which of the following?\n(A) The lasting impact of the spread of Christianity through Afro-Eurasia during the\nperiod of the late Roman Empire\n(B) The success of crusaders in spreading Christianity into East Africa\n(C) The emergence of syncretic religions as Islam spread through East Africa in the\nperiod after the Muslim conquests\n(D) The migration of Bantu peoples across Africa",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 28,
+      "question":"Questions 27–29 refer to the image below.\n\nThe image shows a seventeenth-century Ethiopian painting depicting the Virgin Mary holding the Christ Child in her arms. A merchant is lying below them. The faces of two other figures appear to be watching from behind.\n\nThe image above, from seventeenth-century Ethiopia, shows the Virgin Mary and Christ Child\nwith the merchant who commissioned the painting lying below.\n\n-----------------------------------\n28. The painting can best be used as evidence for which of the following world historical\ntrends that took place during the period 1450 c.e. to 1750 c.e.?\n(A) The use of art to glorify rulers\n(B) The sponsorship of art by new elites\n(C) Governments using art to foster nationalism among their populations\n(D) The diffusion of African artistic traditions across Indian Ocean trade routes",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 29,
+      "question":"Questions 27–29 refer to the image below.\n\nThe image shows a seventeenth-century Ethiopian painting depicting the Virgin Mary holding the Christ Child in her arms. A merchant is lying below them. The faces of two other figures appear to be watching from behind.\n\nThe image above, from seventeenth-century Ethiopia, shows the Virgin Mary and Christ Child\nwith the merchant who commissioned the painting lying below.\n\n-----------------------------------\n29. Ethiopia’s cultural traditions reflected in the painting had which of the following\neffects on Ethiopia’s interactions with European colonial empires in the late\nnineteenth century?\n(A) They provided Ethiopians with an additional rationale for resisting European\nencroachment.\n(B) They created an opportunity for Ethiopia to participate in the European\nalliance system.\n(C) They strengthened Social Darwinist claims that Ethiopians were inferior\nto Europeans.\n(D) They contributed to the isolation of Ethiopia from the emerging global\nlabor network.",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 30,
+      "question":"Questions 30–32 refer to the table below.\nPOPULATION OF THE HAWAIIAN ISLANDS, 1778–1878\nYear Population\n1778 242,000\n1823 135,000\n1831–32 124,000\n1835–36 107,000\n1850 84,000\n1853* 73,000\n1860 70,000\n1866 63,000\n1872 57,000\n1878** 58,000\n*1853: 97.5% of the population born in Hawaii\n**1878: 83.6% of the population born in Hawaii\nSource: Alfred W. Crosby, Germs, Seeds and Animals: Studies in Ecological History, 1994\n\n----------------------------\n\n30. Which of the following best explains the overall population trend shown in the table?\n(A) Large-scale migration from the Pacific Islands to the Americas for plantation labor\n(B) Conflict between Pacific Island states\n(C) The spread of epidemic diseases as a result of contact with Westerners\n(D) The expansion of the Japanese empire in the Pacific",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 31,
+      "question":"Questions 30–32 refer to the table below.\nPOPULATION OF THE HAWAIIAN ISLANDS, 1778–1878\nYear Population\n1778 242,000\n1823 135,000\n1831–32 124,000\n1835–36 107,000\n1850 84,000\n1853* 73,000\n1860 70,000\n1866 63,000\n1872 57,000\n1878** 58,000\n*1853: 97.5% of the population born in Hawaii\n**1878: 83.6% of the population born in Hawaii\nSource: Alfred W. Crosby, Germs, Seeds and Animals: Studies in Ecological History, 1994\n\n----------------------------\n\n31. Which of the following best explains the changes in the population of the Hawaiian\nIslands from 1872 to 1878?\n(A) The increased presence of Asian indentured servants on Hawaiian plantations\n(B) The growth of tourism as a result of technological advances in transportation\n(C) The urbanization of Hawaii as a result of industrialization\n(D) The development of racial exclusion policies in European settler colonies",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 32,
+      "question":"Questions 30–32 refer to the table below.\nPOPULATION OF THE HAWAIIAN ISLANDS, 1778–1878\nYear Population\n1778 242,000\n1823 135,000\n1831–32 124,000\n1835–36 107,000\n1850 84,000\n1853* 73,000\n1860 70,000\n1866 63,000\n1872 57,000\n1878** 58,000\n*1853: 97.5% of the population born in Hawaii\n**1878: 83.6% of the population born in Hawaii\nSource: Alfred W. Crosby, Germs, Seeds and Animals: Studies in Ecological History, 1994\n\n----------------------------\n\n32. The historical trend represented by the table is most similar to which of the following?\n(A) The spread of the Black Death along the Silk Roads in the fourteenth century\n(B) The impact of the Columbian Exchange on American populations in the\nsixteenth century\n(C) The effects of the trans-Atlantic slave trade on West African populations in the\nseventeenth and eighteenth centuries\n(D) The results of the development of reliable birth control methods in the\ntwentieth century",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 33,
+      "question":"Questions 33–35 refer to the objects shown in the following two images.\nImage 1\nIV ORY TIP FOR A KING’S CEREMONIAL SCEPTER SHOWING A FEMALE ANCESTOR SPIRIT, KONGO, WESTERN AFRICA, CIRCA 1800\nThe image shows an ivory carving of female ancestor spirit.\nThe spirit is sitting with her legs crossed, baring her uncovered chest, and holding a small baby in her lap. The female appears to have tattoos.\n\nImage 2\nFEMALE FIGURE ON A CRUCIFIX, KONGO, WESTERN AFRICA, CIRCA 1800\n\nThe figure shows a stone carving of a female figure on a crucifix.\n\nKongo. Crucifix. Stone, pigment, 13 × 6 1⁄2 × 2 1⁄2 in. (33.0 × 16.6 × 6.4 cm). Brooklyn Museum, Museum Expedition 1922,\nRobert B. Woodward Memorial Fund, 22.240.\n----------------------------\n33. The object in Image 1 best illustrates which of the following continuities in world history?\n(A) The power of traditional elites was continuously challenged by the emerging power\nof new elites.\n(B) The power of states was based on the ability of rulers to monopolize the use of violence.\n(C) Artists depended on royal patronage for their livelihoods.\n(D) Rulers used religious imagery to legitimize their political authority.",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 34,
+      "question": "Questions 33–35 refer to the objects shown in the following two images.\nImage 1\nIV ORY TIP FOR A KING’S CEREMONIAL SCEPTER SHOWING A FEMALE ANCESTOR SPIRIT, KONGO, WESTERN AFRICA, CIRCA 1800\nThe image shows an ivory carving of female ancestor spirit.\nThe spirit is sitting with her legs crossed, baring her uncovered chest, and holding a small baby in her lap. The female appears to have tattoos.\n\nImage 2\nFEMALE FIGURE ON A CRUCIFIX, KONGO, WESTERN AFRICA, CIRCA 1800\n\nThe figure shows a stone carving of a female figure on a crucifix.\n\nKongo. Crucifix. Stone, pigment, 13 × 6 1⁄2 × 2 1⁄2 in. (33.0 × 16.6 × 6.4 cm). Brooklyn Museum, Museum Expedition 1922,\nRobert B. Woodward Memorial Fund, 22.240.\n----------------------------\n34. The object in Image 2 best illustrates which of the following cultural processes in the\nperiod circa 1450–1750?\n(A) The spread of Ethiopian cultural traditions in West Africa\n(B) The influence of the Columbian Exchange on artistic traditions\n(C) The development of religious syncretism as cultural traditions spread\n(D) The intensification of pre-existing religious conflicts and rivalries",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 35,
+      "question":"Questions 33–35 refer to the objects shown in the following two images.\nImage 1\nIV ORY TIP FOR A KING’S CEREMONIAL SCEPTER SHOWING A FEMALE ANCESTOR SPIRIT, KONGO, WESTERN AFRICA, CIRCA 1800\nThe image shows an ivory carving of female ancestor spirit.\nThe spirit is sitting with her legs crossed, baring her uncovered chest, and holding a small baby in her lap. The female appears to have tattoos.\n\nImage 2\nFEMALE FIGURE ON A CRUCIFIX, KONGO, WESTERN AFRICA, CIRCA 1800\n\nThe figure shows a stone carving of a female figure on a crucifix.\n\nKongo. Crucifix. Stone, pigment, 13 × 6 1⁄2 × 2 1⁄2 in. (33.0 × 16.6 × 6.4 cm). Brooklyn Museum, Museum Expedition 1922,\nRobert B. Woodward Memorial Fund, 22.240.\n----------------------------\n35. Taken together, the two images best support which of the following conclusions?\n(A) New European technologies transformed African artistic traditions.\n(B) African societies that practiced Christianity generally gave women greater political\nand cultural prominence than did African societies that practiced traditional\nreligions.\n(C) African societies combined a patriarchal power structure with cultural traditions\nthat gave women a prominent place in social and cultural life.\n(D) Women’s roles in African societies were shaped by the interaction between\nChristianity and Islam as the two religions spread in the region.",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 36,
+      "question":"Questions 36–39 refer to the passage below.\n“I can safely say that before the commencement of what I may call the Railway Period, not\nonly were the wages in most parts of the country established by tradition and authority,\nrather than by the natural laws of supply and demand, but the opportunity to work was\nin general restricted to particular spots. For the first time in history the Indian finds that\nhe has in his power of labor a valuable possession which, if he uses it right, will give him\nsomething much better than mere subsistence. Follow him to his own home, in some\nremote village, and you will find that the railway laborer has brought back not only new\nmodes of working and a new feeling of self-respect and independence, but also new ideas\nof what government and laws can offer him. And he is, I believe, a better and more loyal\nsubject, as he is certainly a more useful laborer.”\n\nBartle Frere, British governor of the Bombay Presidency, India,\nspeech on opening of a rail line, 1863\n---------------------------------\n36. Frere’s speech is best understood in the context of which of the following?\n(A) Governments in Asian empires undertaking economic reforms to catch up with European powers\n(B) Governments undertaking political and social reforms to mitigate the effects of industrial capitalism\n(C) Governments expanding and consolidating their empires using their increasing industrial power\n(D) Governments promoting redistributionist policies to reduce income inequality between labor and capital",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 37,
+      "question":"Questions 36–39 refer to the passage below.\n“I can safely say that before the commencement of what I may call the Railway Period, not\nonly were the wages in most parts of the country established by tradition and authority,\nrather than by the natural laws of supply and demand, but the opportunity to work was\nin general restricted to particular spots. For the first time in history the Indian finds that\nhe has in his power of labor a valuable possession which, if he uses it right, will give him\nsomething much better than mere subsistence. Follow him to his own home, in some\nremote village, and you will find that the railway laborer has brought back not only new\nmodes of working and a new feeling of self-respect and independence, but also new ideas\nof what government and laws can offer him. And he is, I believe, a better and more loyal\nsubject, as he is certainly a more useful laborer.”\n\nBartle Frere, British governor of the Bombay Presidency, India,\nspeech on opening of a rail line, 1863\n---------------------------------\n37. The lifting of traditional restrictions on Indian labor alluded to in the speech\ncontributed most directly to which of the following global processes?\n(A) Protests for improved sanitation and living conditions in industrial cities\n(B) Long-distance and overseas migrations of contractual and coerced workers\n(C) The decline of Spanish and Portuguese influence in the Indian Ocean\n(D) The emergence of new racial ideologies that supported European imperialism",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 38,
+      "question":"Questions 36–39 refer to the passage below.\n“I can safely say that before the commencement of what I may call the Railway Period, not\nonly were the wages in most parts of the country established by tradition and authority,\nrather than by the natural laws of supply and demand, but the opportunity to work was\nin general restricted to particular spots. For the first time in history the Indian finds that\nhe has in his power of labor a valuable possession which, if he uses it right, will give him\nsomething much better than mere subsistence. Follow him to his own home, in some\nremote village, and you will find that the railway laborer has brought back not only new\nmodes of working and a new feeling of self-respect and independence, but also new ideas\nof what government and laws can offer him. And he is, I believe, a better and more loyal\nsubject, as he is certainly a more useful laborer.”\n\nBartle Frere, British governor of the Bombay Presidency, India,\nspeech on opening of a rail line, 1863\n---------------------------------\n38. Which of the following best explains Frere’s characterization of the time of his speech\nas the “Railway Period” in British India?\n(A) Railways provided a means for Hindu pilgrims to visit sacred sites quickly and\ncheaply.\n(B) Railways allowed British missionaries to spread Christianity more effectively.\n(C) Railways opened up access to interior markets and resources for British\ncommercial interests.\n(D) Railways eased the overcrowding in Indian cities by allowing industrial workers to\ncommute from suburban areas.",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 39,
+      "question":"Questions 36–39 refer to the passage below.\n“I can safely say that before the commencement of what I may call the Railway Period, not\nonly were the wages in most parts of the country established by tradition and authority,\nrather than by the natural laws of supply and demand, but the opportunity to work was\nin general restricted to particular spots. For the first time in history the Indian finds that\nhe has in his power of labor a valuable possession which, if he uses it right, will give him\nsomething much better than mere subsistence. Follow him to his own home, in some\nremote village, and you will find that the railway laborer has brought back not only new\nmodes of working and a new feeling of self-respect and independence, but also new ideas\nof what government and laws can offer him. And he is, I believe, a better and more loyal\nsubject, as he is certainly a more useful laborer.”\n\nBartle Frere, British governor of the Bombay Presidency, India,\nspeech on opening of a rail line, 1863\n---------------------------------\n39. Frere’s view of the changing opportunities for Indian labor most directly reflects the\ninfluence of which of the following?\n(A) The ideals of classical liberalism as stated by Adam Smith and John Stuart Mill\n(B) The ideals of communism as stated by Karl Marx and Friedrich Engels\n(C) The ideals of the Enlightenment as stated by political revolutionaries such as\nSimon Bolívar\n(D) The ideals of mercantilism as developed by European state-sponsored\njoint-stock trading",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 40,
+      "question":"Questions 40–42 refer to the passage below.\n“Political Consequences of the Spanish Conquest of Mexico\nBecause Mexico was the most important of the Spanish conquests, it was governed by\nrulers of very high standing, almost equal to that of the Spanish kings. In this way the\ninhabitants of our Republic—Indians of different races, mestizos [people of Spanish and\nIndian parentage], and criollos [American-born people of European ancestry]—all became\naccustomed to feeling Mexican and to loving one another as compatriots. This was surely\nthe most important consequence of the conquest, because it meant that different tribes of\nIndians became patriotic Mexicans, without distinction of race and color.\nEthnic Consequences of the Conquest\n[Unlike other Europeans], the Spanish never accepted the hateful idea that there are\ninferior races that are destined to perish en masse or serve forever others who consider\nthemselves superior. The consequence of this worldview was that the conquistadors and\ncolonizers fully mixed with the Indians, which brought into being the mestizo, which\ncurrently constitutes the most important element of the Mexican population. A moment\nwill soon come when the people of Mexico are unified by the love for their country.”\nElementary school history book approved for use in all Mexican schools\nby Mexico’s Ministry of Education, 1951\n---------------------------------\n40. The interpretation of Mexican history presented in the passage is most strongly\ninfluenced by which of the following?\n(A) Marxism\n(B) Anticolonialism\n(C) Social Darwinism\n(D) Nationalism",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 41,
+      "question":"Questions 40–42 refer to the passage below.\n“Political Consequences of the Spanish Conquest of Mexico\nBecause Mexico was the most important of the Spanish conquests, it was governed by\nrulers of very high standing, almost equal to that of the Spanish kings. In this way the\ninhabitants of our Republic—Indians of different races, mestizos [people of Spanish and\nIndian parentage], and criollos [American-born people of European ancestry]—all became\naccustomed to feeling Mexican and to loving one another as compatriots. This was surely\nthe most important consequence of the conquest, because it meant that different tribes of\nIndians became patriotic Mexicans, without distinction of race and color.\nEthnic Consequences of the Conquest\n[Unlike other Europeans], the Spanish never accepted the hateful idea that there are\ninferior races that are destined to perish en masse or serve forever others who consider\nthemselves superior. The consequence of this worldview was that the conquistadors and\ncolonizers fully mixed with the Indians, which brought into being the mestizo, which\ncurrently constitutes the most important element of the Mexican population. A moment\nwill soon come when the people of Mexico are unified by the love for their country.”\nElementary school history book approved for use in all Mexican schools\nby Mexico’s Ministry of Education, 1951\n---------------------------------\n41. The reference in the second paragraph to “the hateful idea that there are inferior\nraces” is best understood in the context of which of the following twentieth-century\ndevelopments?\n(A) The Spanish Civil War\n(B) The final dissolution of the Spanish colonial empire\n(C) The Holocaust in Europe during the Second World War\n(D) The migration of former colonial subjects to Europe",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 42,
+      "question":"Questions 40–42 refer to the passage below.\n“Political Consequences of the Spanish Conquest of Mexico\nBecause Mexico was the most important of the Spanish conquests, it was governed by\nrulers of very high standing, almost equal to that of the Spanish kings. In this way the\ninhabitants of our Republic—Indians of different races, mestizos [people of Spanish and\nIndian parentage], and criollos [American-born people of European ancestry]—all became\naccustomed to feeling Mexican and to loving one another as compatriots. This was surely\nthe most important consequence of the conquest, because it meant that different tribes of\nIndians became patriotic Mexicans, without distinction of race and color.\nEthnic Consequences of the Conquest\n[Unlike other Europeans], the Spanish never accepted the hateful idea that there are\ninferior races that are destined to perish en masse or serve forever others who consider\nthemselves superior. The consequence of this worldview was that the conquistadors and\ncolonizers fully mixed with the Indians, which brought into being the mestizo, which\ncurrently constitutes the most important element of the Mexican population. A moment\nwill soon come when the people of Mexico are unified by the love for their country.”\nElementary school history book approved for use in all Mexican schools\nby Mexico’s Ministry of Education, 1951\n---------------------------------\n42. Present-day historians would most likely agree with which of the following aspects of\nthe historical interpretation advanced in the passage?\n(A) The omission of the demographic effects of the Spanish conquest on the Indians\n(B) The claim that the ethnic and racial hierarchies of colonial Mexico were egalitarian\nin nature\n(C) The gendered language and use of ethnic stereotypes to describe the conquerors\n(D) The suggestion that the Spanish conquest of Mexico resulted in the formation of\nnew identities",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 43,
+      "question":"Questions 43–45 refer to the recipe below.\n\nIngredients for “Empire Christmas Pudding”\n1 lb. sultana raisins . . . . . Australia\n6 oz. minced apple . . . . . Canada\n1 lb. beef suet . . . . . New Zealand\n6 oz. candied orange peel . . . . . South Africa\n8 oz. flour . . . . . United Kingdom\n4 eggs . . . . . Irish Free State\n1⁄2 pinch ground cinnamon . . . . . Ceylon\n1⁄2 pinch ground cloves . . . . . Zanzibar\n1⁄2 pinch ground nutmeg . . . . . Singapore\n1 pinch pudding spice . . . . . India\n2 tbsp. rum from cane sugar . . . . . Jamaica\nRecipe published in British newspapers by the Empire Marketing Board of Great\nBritain, 1930s. The recipe was created by King George VI’s chef.\n---------------------------------\n43. Which of the following best explains the motivation behind the Empire Marketing\nBoard’s publication of the Empire Christmas Pudding recipe?\n(A) To promote innovations of the Green Revolution\n(B) To promote imperial unity in response to rising nationalism\n(C) To promote free market economic plans\n(D) To promote Christian values in the context of Soviet expansion",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 44,
+      "question":"Questions 43–45 refer to the recipe below.\n\nIngredients for “Empire Christmas Pudding”\n1 lb. sultana raisins . . . . . Australia\n6 oz. minced apple . . . . . Canada\n1 lb. beef suet . . . . . New Zealand\n6 oz. candied orange peel . . . . . South Africa\n8 oz. flour . . . . . United Kingdom\n4 eggs . . . . . Irish Free State\n1⁄2 pinch ground cinnamon . . . . . Ceylon\n1⁄2 pinch ground cloves . . . . . Zanzibar\n1⁄2 pinch ground nutmeg . . . . . Singapore\n1 pinch pudding spice . . . . . India\n2 tbsp. rum from cane sugar . . . . . Jamaica\nRecipe published in British newspapers by the Empire Marketing Board of Great\nBritain, 1930s. The recipe was created by King George VI’s chef.\n---------------------------------\n44. The inclusion of rum from Jamaica in the recipe is a consequence of which of the following?\n(A) The development of a plantation economy based on coerced and semicoerced labor\n(B) The transfer of American crops to Europe as a result of the Columbian Exchange\n(C) The migration of Caribbean peoples to England\n(D) The intensification of free peasant agriculture in the Caribbean",
+      "ground_truth": "A",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 45,
+      "question":"Questions 43–45 refer to the recipe below.\n\nIngredients for “Empire Christmas Pudding”\n1 lb. sultana raisins . . . . . Australia\n6 oz. minced apple . . . . . Canada\n1 lb. beef suet . . . . . New Zealand\n6 oz. candied orange peel . . . . . South Africa\n8 oz. flour . . . . . United Kingdom\n4 eggs . . . . . Irish Free State\n1⁄2 pinch ground cinnamon . . . . . Ceylon\n1⁄2 pinch ground cloves . . . . . Zanzibar\n1⁄2 pinch ground nutmeg . . . . . Singapore\n1 pinch pudding spice . . . . . India\n2 tbsp. rum from cane sugar . . . . . Jamaica\nRecipe published in British newspapers by the Empire Marketing Board of Great\nBritain, 1930s. The recipe was created by King George VI’s chef.\n---------------------------------\n45. Demand for Asian spices drove which of the following in the sixteenth and seventeenth\ncenturies?\n(A) The widespread use of convict labor in agriculture\n(B) The development of industrial manufacturing processes\n(C) The expansion of the Manchu Empire in East Asia\n(D) The establishment of European trading-post empires",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 46,
+      "question":"Questions 46–49 refer to the following two poems from Echoes of Revolt, a poetry\ncollection published by the Ghadar, an Indian political movement, 1914.\nPoem 1\n\n“The world calls us coolie.*\nWhy doesn’t our flag fly anywhere?\nHow shall we survive, are we slaves forever?\nWhy aren’t we involved in politics?\nFrom the beginning we have been oppressed.\nWhy don’t we even dream of freedom?\nOnly a handful of oppressors have taken our fields.\nWhy has no Indian cultivator risen and protected his land?\nOur children cry out for want of education.\nWhy don’t we open science colleges?”\n\n*An insulting term for South or East Asian manual workers\n\nPoem 2\n\n“Why do you sit silent in your own country\nYou who make so much noise in foreign lands?\nNoise outside of India is of little avail.\nPay attention to activities within India.\nYou are quarreling and Hindu-Muslim conflict is prevalent.\nThe jewel of India is rotting in the earth\nbecause you are fighting over the Vedas and the Koran.\nGo and speak with soldiers.\nAsk them why they are asleep, men who once held swords.\nMuslim, Hindu, and Sikh heroes should join together.\nThe power of the oppressors is nothing if we unitedly attack him.\nIndians have been the victors in the battlefields\nof Burma, Egypt, China and the Sudan.”\n---------------------------------\n46. Which of the following best accounts for the circumstances of Indian workers alluded\nto in Poem 1?\n(A) The increasing migration of Indian laborers to industrialized urban areas\n(B) The cultural divisions between Indian Muslim migrants and Indian Hindu\nmigrants\n(C) The coerced migration of Indian indentured servants\n(D) The pattern of many Indian migrants returning to their homeland after their\ncontracts ended",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 47,
+      "question":"Questions 46–49 refer to the following two poems from Echoes of Revolt, a poetry\ncollection published by the Ghadar, an Indian political movement, 1914.\nPoem 1\n\n“The world calls us coolie.*\nWhy doesn’t our flag fly anywhere?\nHow shall we survive, are we slaves forever?\nWhy aren’t we involved in politics?\nFrom the beginning we have been oppressed.\nWhy don’t we even dream of freedom?\nOnly a handful of oppressors have taken our fields.\nWhy has no Indian cultivator risen and protected his land?\nOur children cry out for want of education.\nWhy don’t we open science colleges?”\n\n*An insulting term for South or East Asian manual workers\n\nPoem 2\n\n“Why do you sit silent in your own country\nYou who make so much noise in foreign lands?\nNoise outside of India is of little avail.\nPay attention to activities within India.\nYou are quarreling and Hindu-Muslim conflict is prevalent.\nThe jewel of India is rotting in the earth\nbecause you are fighting over the Vedas and the Koran.\nGo and speak with soldiers.\nAsk them why they are asleep, men who once held swords.\nMuslim, Hindu, and Sikh heroes should join together.\nThe power of the oppressors is nothing if we unitedly attack him.\nIndians have been the victors in the battlefields\nof Burma, Egypt, China and the Sudan.”\n---------------------------------\n47. In Poem 1, the sentiments regarding education and politics are best understood in the\ncontext of which of the following?\n(A) The persistence of slavery in spite of the abolitionist movement in the\nBritish Empire\n(B) The growth of women’s movements pushing for greater education and\ndomestic rights\n(C) The British failure to provide mass education in India, for fear that doing so would\nencourage resistance against imperial rule\n(D) The revival of traditional Hindu and Muslim religious beliefs in India",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 48,
+      "question":"Questions 46–49 refer to the following two poems from Echoes of Revolt, a poetry\ncollection published by the Ghadar, an Indian political movement, 1914.\nPoem 1\n\n“The world calls us coolie.*\nWhy doesn’t our flag fly anywhere?\nHow shall we survive, are we slaves forever?\nWhy aren’t we involved in politics?\nFrom the beginning we have been oppressed.\nWhy don’t we even dream of freedom?\nOnly a handful of oppressors have taken our fields.\nWhy has no Indian cultivator risen and protected his land?\nOur children cry out for want of education.\nWhy don’t we open science colleges?”\n\n*An insulting term for South or East Asian manual workers\n\nPoem 2\n\n“Why do you sit silent in your own country\nYou who make so much noise in foreign lands?\nNoise outside of India is of little avail.\nPay attention to activities within India.\nYou are quarreling and Hindu-Muslim conflict is prevalent.\nThe jewel of India is rotting in the earth\nbecause you are fighting over the Vedas and the Koran.\nGo and speak with soldiers.\nAsk them why they are asleep, men who once held swords.\nMuslim, Hindu, and Sikh heroes should join together.\nThe power of the oppressors is nothing if we unitedly attack him.\nIndians have been the victors in the battlefields\nof Burma, Egypt, China and the Sudan.”\n---------------------------------\n48. The religious tensions alluded to in Poem 2 would result most directly in which of\nthe following?\n(A) The migration of many South Asians to Great Britain\n(B) The development of new syncretic belief systems in India such as Sikhism and\nBahaism\n(C) The Japanese invasion of India during the Second World War\n(D) The population resettlement following the partition of South Asia into India and\nPakistan",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 49,
+      "question":"Questions 46–49 refer to the following two poems from Echoes of Revolt, a poetry\ncollection published by the Ghadar, an Indian political movement, 1914.\nPoem 1\n\n“The world calls us coolie.*\nWhy doesn’t our flag fly anywhere?\nHow shall we survive, are we slaves forever?\nWhy aren’t we involved in politics?\nFrom the beginning we have been oppressed.\nWhy don’t we even dream of freedom?\nOnly a handful of oppressors have taken our fields.\nWhy has no Indian cultivator risen and protected his land?\nOur children cry out for want of education.\nWhy don’t we open science colleges?”\n\n*An insulting term for South or East Asian manual workers\n\nPoem 2\n\n“Why do you sit silent in your own country\nYou who make so much noise in foreign lands?\nNoise outside of India is of little avail.\nPay attention to activities within India.\nYou are quarreling and Hindu-Muslim conflict is prevalent.\nThe jewel of India is rotting in the earth\nbecause you are fighting over the Vedas and the Koran.\nGo and speak with soldiers.\nAsk them why they are asleep, men who once held swords.\nMuslim, Hindu, and Sikh heroes should join together.\nThe power of the oppressors is nothing if we unitedly attack him.\nIndians have been the victors in the battlefields\nof Burma, Egypt, China and the Sudan.”\n---------------------------------\n49. In Poem 2 the reference to Indian victories on battlefields is best understood in the\ncontext of which of the following?\n(A) Violent resistance by Indians to colonial rule\n(B) The drafting of migrants into the militaries of host countries\n(C) Indian resistance to Japanese imperialism\n(D) The mobilization of Indian troops to fight in Great Britain’s wars",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 50,
+      "question": "Questions 50–52 refer to the chart and map below.\nSource 1\n\nVOLUME OF WATER AVAILABLE FOR USE\nIN IRAQ, BY ORIGIN OF THE WATER SOURCE, 2010\n\n18% - From rainfall and other sources internal to Iraq\n4%  - From rivers originating in Syria\n6%  - From rivers originating in Iran\n72% - From rivers originating in Turkey\n\nSource: Iraq Ministry of Water Resources, 2010.\n\n\nSource 2\nMAJOR HYDROELECTRIC DAMS IN THE EUPHRATES RIVER BASIN, 2010\n\n\n---------------------------------\n\n50. The two sources best illustrate which of the following aspects of human interactions\nwith the environment in the late twentieth century?\n(A) Industrialization led to increasingly hazardous levels of air and water pollution.\n(B) Economic development policies intensified competition over limited natural\nresources.\n(C) Urbanization dramatically expanded the per capita rates of freshwater\nconsumption.\n(D) Climate change led to increasing desertification in drought-prone regions.\n",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 51,
+      "question": "Questions 50–52 refer to the chart and map below.\nSource 1\n\nVOLUME OF WATER AVAILABLE FOR USE\nIN IRAQ, BY ORIGIN OF THE WATER SOURCE, 2010\n\n18% - From rainfall and other sources internal to Iraq\n4%  - From rivers originating in Syria\n6%  - From rivers originating in Iran\n72% - From rivers originating in Turkey\n\nSource: Iraq Ministry of Water Resources, 2010.\n\n\nSource 2\nMAJOR HYDROELECTRIC DAMS IN THE EUPHRATES RIVER BASIN, 2010\n\n\n---------------------------------\n\n51. On a global scale, which of the following directly prevented problems such as\nthose alluded to in the two sources from leading to population decline in the late\ntwentieth century?\n(A) The development of new forms of global communication and transportation\n(B) The extension of the average human lifespan brought about by medical advances\n(C) The greater social acceptance of birth control\n(D) The increases in average agricultural yields per acre brought about by the Green Revolution",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 52,
+      "question":"Questions 50–52 refer to the chart and map below.\nSource 1\n\nVOLUME OF WATER AVAILABLE FOR USE\nIN IRAQ, BY ORIGIN OF THE WATER SOURCE, 2010\n\n18% - From rainfall and other sources internal to Iraq\n4%  - From rivers originating in Syria\n6%  - From rivers originating in Iran\n72% - From rivers originating in Turkey\n\nSource: Iraq Ministry of Water Resources, 2010.\n\n\nSource 2\nMAJOR HYDROELECTRIC DAMS IN THE EUPHRATES RIVER BASIN, 2010\n\n\n---------------------------------\n\n52. Which of the following additional pieces of information would be most directly useful\nin assessing the extent to which the developments reflected in Source 2 represent a\nthreat to Iraq’s economy?\n(A) Information on the total amount of foreign investment in Iraq’s economy\n(B) Information on the percentage of Iraqi agriculture that depends on irrigation\n(C) Information on the political affiliation of Iraq’s minister of water resources\n(D) Information on Iraq’s petroleum resources and revenues",
+      "ground_truth": "B",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 53,
+      "question": "Questions 53–55 refer to the passage below.\n“The suggestion made by the prosecution in its opening statement that the [anti-Apartheid\nmovement] in South Africa is under the influence of foreigners or communists is wholly\nincorrect. I have done whatever I did, both as an individual and as a leader of my people,\nbecause of my experience in South Africa and my own proudly felt African background.\nSouth Africa is the richest country in Africa and could be one of the richest countries in\nthe world. But it is a land of extremes and remarkable contrasts. The Whites enjoy what\nmay well be the highest standard of living in the world, while Africans live in poverty and\nmisery. Forty percent of the Africans live in hopelessly overcrowded, drought-stricken\nreserves. Thirty percent are tenant laborers or squatters on White farms and work and live\nunder conditions similar to those of the serfs of the Middle Ages.\nThe complaint of Africans, however, is not only that they are poor and the Whites are rich,\nbut that the laws made by the Whites are designed to preserve this situation. The lack of\nhuman dignity experienced by Africans is the direct result of the policy of White supremacy.”\nNelson Mandela, speech to a South African court\nwhile standing trial for acts of sabotage, 1964\n\n\n---------------------------------\n\n53. The state’s claim as described in the first paragraph is best understood in the context of\nwhich of the following?\n(A) The Non-Aligned Movement\n(B) Decolonization\n(C) The Cold War\n(D) Economic nationalization",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 54,
+      "question":"Questions 53–55 refer to the passage below.\n“The suggestion made by the prosecution in its opening statement that the [anti-Apartheid\nmovement] in South Africa is under the influence of foreigners or communists is wholly\nincorrect. I have done whatever I did, both as an individual and as a leader of my people,\nbecause of my experience in South Africa and my own proudly felt African background.\nSouth Africa is the richest country in Africa and could be one of the richest countries in\nthe world. But it is a land of extremes and remarkable contrasts. The Whites enjoy what\nmay well be the highest standard of living in the world, while Africans live in poverty and\nmisery. Forty percent of the Africans live in hopelessly overcrowded, drought-stricken\nreserves. Thirty percent are tenant laborers or squatters on White farms and work and live\nunder conditions similar to those of the serfs of the Middle Ages.\nThe complaint of Africans, however, is not only that they are poor and the Whites are rich,\nbut that the laws made by the Whites are designed to preserve this situation. The lack of\nhuman dignity experienced by Africans is the direct result of the policy of White supremacy.”\nNelson Mandela, speech to a South African court\nwhile standing trial for acts of sabotage, 1964\n\n\n---------------------------------\n\n54. The economic conditions described by Mandela in the second paragraph would lead\nmany former European colonies to embrace which of the following?\n(A) The reestablishment of European rule\n(B) The sale of state-owned land to Western entrepreneurs\n(C) The implementation of redistributionist economic policies\n(D) The encouragement of immigration to Europe",
+      "ground_truth": "C",
+      "context": [],
+      "answer": ""
+    },
+    {
+      "id": 55,
+      "question":"Questions 53–55 refer to the passage below.\n“The suggestion made by the prosecution in its opening statement that the [anti-Apartheid\nmovement] in South Africa is under the influence of foreigners or communists is wholly\nincorrect. I have done whatever I did, both as an individual and as a leader of my people,\nbecause of my experience in South Africa and my own proudly felt African background.\nSouth Africa is the richest country in Africa and could be one of the richest countries in\nthe world. But it is a land of extremes and remarkable contrasts. The Whites enjoy what\nmay well be the highest standard of living in the world, while Africans live in poverty and\nmisery. Forty percent of the Africans live in hopelessly overcrowded, drought-stricken\nreserves. Thirty percent are tenant laborers or squatters on White farms and work and live\nunder conditions similar to those of the serfs of the Middle Ages.\nThe complaint of Africans, however, is not only that they are poor and the Whites are rich,\nbut that the laws made by the Whites are designed to preserve this situation. The lack of\nhuman dignity experienced by Africans is the direct result of the policy of White supremacy.”\nNelson Mandela, speech to a South African court\nwhile standing trial for acts of sabotage, 1964\n\n\n---------------------------------\n\n55. Which of the following provided justification for the South African government’s\npolicies described in the third paragraph?\n(A) Anti-Imperialism\n(B) Liberal Nationalism\n(C) Socialism\n(D) Social Darwinism",
+      "ground_truth": "D",
+      "context": [],
+      "answer": ""
+    }
+  ]
+}
