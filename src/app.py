@@ -71,6 +71,18 @@ def main():
     for message in st.session_state.chat_history:
         with st.chat_message(message["role"].name, avatar=message["role"].avatar):
             st.markdown(message["content"])
+            
+    with st.sidebar:
+        num_docs_context = st.text_input("Number of vectors used as context")
+        
+        if num_docs_context:
+            try:
+                num_docs = int(num_docs_context)
+                st.write(f"You entered: {num_docs}")
+            except(ValueError):
+                st.write(f"Invalid input")
+        else:
+            num_docs = 4
 
     # Get and process the next inputted prompt
     if prompt := st.chat_input("Ask a question about your textbooks"):
@@ -86,7 +98,7 @@ def main():
             # Get embedding function
             embedding_function = DatabaseManager.get_embedding_function()
             num_docs = 4
-            response, sources = RAGManager(st.session_state.chroma_path, embedding_function, is_web_search_enabled, num_docs).run(prompt)
+            response, sources, contexts = RAGManager(st.session_state.chroma_path, embedding_function, is_web_search_enabled).run(prompt)
             
             st.write_stream(response_generator(response))
 
@@ -119,15 +131,6 @@ def main():
             success = st.success("Textbooks uploaded successfully")
             time.sleep(2)
             success.empty()
-            
-        num_docs_context = st.text_input("Number of docs used as context")
-        
-        if num_docs_context:
-            try:
-                num_docs = int(num_docs_context)
-                st.write(f"You entered: {num_docs}")
-            except(ValueError):
-                st.write(f"Invalid input")
 
 if __name__ == '__main__':
     main()

@@ -41,7 +41,8 @@ class RAGManager:
             embedding_function=self.embedding_function
         )
 
-        self.retriever = vectorstore.as_retriever(kwargs={"k":self.num_docs})
+        self.retriever = vectorstore.as_retriever(search_kwargs={"k":self.num_docs})
+        print(self.num_docs)
 
     def retrieve(self, state):
         """
@@ -165,7 +166,7 @@ class RAGManager:
         for d in documents:
             score = retrieval_grader.invoke({"question": question, "document": d.page_content})
             grade = score.binary_score
-            if grade == "yes":
+            if grade == YES:
                 print("---GRADE: DOCUMENT RELEVANT---")
                 filtered_docs.append(d)
             else:
@@ -191,7 +192,13 @@ class RAGManager:
         # Web search
         web_search_tool = TavilySearchResults()
         docs = web_search_tool.invoke({"query": question})
-        web_results = "\n".join([d["content"] for d in docs])
+
+        # TODO: handle unsuccessful search
+        try:
+            web_results = "\n".join([d["content"] for d in docs])
+        except:
+            web_results = "The question is too long."
+
         web_results = Document(page_content=web_results)
 
         return {"documents": web_results, "question": question}
@@ -336,15 +343,18 @@ class RAGManager:
             return "useful"
         
         # Check hallucination
-        if grade == "yes":
+        if grade == YES:
             print("---DECISION: GENERATION IS GROUNDED IN DOCUMENTS---")
             # Check question-answering
             print("---GRADE GENERATION vs QUESTION---")
             score = answer_grader.invoke({"question": question,"generation": generation})
-            print(score)
-            grade = score.binary_score
+            
+            try: 
+                grade = score.binary_score
+            except:
+                grade = NO
 
-            if grade == "yes":
+            if grade == YES:
                 print("---DECISION: GENERATION ADDRESSES QUESTION---")
                 return "useful"
             else:
@@ -424,12 +434,15 @@ class RAGManager:
         response = value["generation"]
         pprint.pprint(response)
 
-        # Add references to text if context was pulled from vector DB
-        sources = []
+        # add refereces to response
+        sources = None
+        contexts = None
+
         if "documents" in value:
             sources = [doc.metadata.get(CHUNK_ID, None) for doc in value["documents"]]
-
-        return response, sources
+            contexts = [doc.page_content for doc in value["documents"]]
+        
+        return response, sources, contexts
 
 
     def get_answer(chroma_path:str, embedding_function, question: str):
