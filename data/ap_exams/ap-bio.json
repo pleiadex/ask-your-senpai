@@ -3,7 +3,7 @@
     "qa-dataset": [
         {
             "id":1,
-            "question":"Directions: Each of the questions or incomplete statements below is followed by four suggested answers or completions. Select the one that is best in each case and then fill in the corresponding circle on the answer sheet.",
+            "question":"A dog is following the scent of a jackrabbit. Which of the following accurately describes how the dog’s brain integrates information for smell? (A) Chemoreceptors in the brain send impulses for smell in the nasal cavity. (B) Chemoreceptor cells in the nasal cavity send impulses to the appropriate area of the brain. (C) Chemoreceptors on epithelial cells of the tongue send hormones to the appropriate area of the brain. (D) Receptors originating in the nose send action potentials to the motor regions of the brain.",
             "answer":"",
             "context": [],
             "ground_truth": "B"
