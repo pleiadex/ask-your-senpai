@@ -66,6 +66,12 @@ def main():
 
     # Enable a toggle for allowing web search
     is_web_search_enabled = st.toggle("Allow web search", True)
+    
+    enable_rag = st.toggle("Enable RAG", True)
+    
+    enable_compression = st.toggle("Enable compression", True)
+    
+    enable_rerank = st.toggle("Enable reranking", True)
 
     # Write all messages in the current chat history for this session to the UI
     for message in st.session_state.chat_history:
@@ -83,6 +89,8 @@ def main():
                 st.write(f"Invalid input")
         else:
             num_docs = 4
+            
+        
 
     # Get and process the next inputted prompt
     if prompt := st.chat_input("Ask a question about your textbooks"):
@@ -95,11 +103,12 @@ def main():
         # Invoke the app (StateGraph)
         with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):
             
-            # Get embedding function
             embedding_function = DatabaseManager.get_embedding_function()
-            num_docs = 4
-            response, sources, contexts = RAGManager(st.session_state.chroma_path, embedding_function, is_web_search_enabled).run(prompt)
             
+            if enable_rag:
+                response, sources, contexts = RAGManager(st.session_state.chroma_path, embedding_function, is_web_search_enabled, num_docs, enable_compression, enable_rerank).run(prompt)
+            else:
+                response, sources = RAGManager.get_answer()
             st.write_stream(response_generator(response))
 
             formatted_sources = ""
