@@ -47,8 +47,11 @@ def source_formatter(sources: list):
 
 
 def main():
+    
+    # Load environment variables in .env
     load_dotenv()
 
+    # Initialize chat application
     st.set_page_config(page_title="Ask your senpai", page_icon="🤓")
     st.header("Ask your smart senpai 👀")
 
@@ -56,29 +59,46 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
 
+    # Initialize the ChromaDB file for this session
     if "chroma_path" not in st.session_state:
         uuid = str(uuid4())
         st.session_state.chroma_path = f'./tmp/{uuid}/chroma.db'
 
-    chroma_path = st.session_state.chroma_path
-    
+    # Enable a toggle for allowing web search
     is_web_search_enabled = st.toggle("Allow web search", True)
 
+    # Write all messages in the current chat history for this session to the UI
     for message in st.session_state.chat_history:
         with st.chat_message(message["role"].name, avatar=message["role"].avatar):
             st.markdown(message["content"])
+            
+    with st.sidebar:
+        num_docs_context = st.text_input("Number of vectors used as context")
+        
+        if num_docs_context:
+            try:
+                num_docs = int(num_docs_context)
+                st.write(f"You entered: {num_docs}")
+            except(ValueError):
+                st.write(f"Invalid input")
+        else:
+            num_docs = 4
 
-    # Display the chat history  
+    # Get and process the next inputted prompt
     if prompt := st.chat_input("Ask a question about your textbooks"):
         
+        # Add a text box to the UI for the USER prompt
         st.session_state.chat_history.append({"role": USER, "content": prompt})
         with st.chat_message(USER.name, avatar=USER.avatar):
             st.markdown(prompt)
 
-        # invoke the chain
-        with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):            
+        # Invoke the app (StateGraph)
+        with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):
+            
+            # Get embedding function
             embedding_function = DatabaseManager.get_embedding_function()
-            response, sources, contexts = RAGManager(chroma_path, embedding_function, is_web_search_enabled).run(prompt)
+            num_docs = 4
+            response, sources, contexts = RAGManager(st.session_state.chroma_path, embedding_function, is_web_search_enabled).run(prompt)
             
             st.write_stream(response_generator(response))
 
@@ -106,7 +126,7 @@ def main():
 
                 # update the vector database
                 chunks = DatabaseManager.split_documents(docs)
-                DatabaseManager.update_vectorstore(chroma_path, chunks)
+                DatabaseManager.update_vectorstore(st.session_state.chroma_path, chunks)
 
             success = st.success("Textbooks uploaded successfully")
             time.sleep(2)
