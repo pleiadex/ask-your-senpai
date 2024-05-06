@@ -78,7 +78,7 @@ def main():
         # invoke the chain
         with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):            
             embedding_function = DatabaseManager.get_embedding_function()
-            response, sources = RAGManager(chroma_path, embedding_function, is_web_search_enabled).run(prompt)
+            response, sources, contexts = RAGManager(chroma_path, embedding_function, is_web_search_enabled).run(prompt)
             
             st.write_stream(response_generator(response))
 
