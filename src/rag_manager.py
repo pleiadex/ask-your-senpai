@@ -10,9 +10,7 @@ from models.grader_model import GradeDocuments, GradeHallucinations, GradeAnswer
 from models.graph_state import GraphState
 
 # Tools
-from langchain import hub
 from langchain.schema import Document
-from langchain_openai import ChatOpenAI
 from langchain_cohere import ChatCohere
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import HumanMessage
@@ -20,18 +18,22 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_community.vectorstores import Chroma
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langgraph.graph import END, StateGraph
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import LLMChainExtractor
+from langchain_cohere import CohereRerank
 
 
 class RAGManager:
 
-    def __init__(self, chroma_path:str, embedding_function, is_web_search_enabled:bool):
+    def __init__(self, chroma_path:str, embedding_function, is_ap:bool, num_docs: int, enable_compression: bool, enable_rerank: bool):
         self.chroma_path = chroma_path
         self.embedding_function = embedding_function
-        yes = 'yes'
-        no = 'no'
-        self.is_web_search_enabled = is_web_search_enabled
+        self.is_ap = is_ap
         self.loop_count = 0
         self.max_loops = 3
+        self.num_docs = num_docs
+        self.is_compression_enable = enable_compression
+        self.is_rerank_enable = enable_rerank
 
     
     def build_index(self):
@@ -40,7 +42,8 @@ class RAGManager:
             embedding_function=self.embedding_function
         )
 
-        self.retriever = vectorstore.as_retriever()
+        self.retriever = vectorstore.as_retriever(search_kwargs={"k": self.num_docs})
+        print(self.num_docs)
 
     def retrieve(self, state):
         """
@@ -56,9 +59,22 @@ class RAGManager:
         question = state["question"]
 
         self.build_index()
-
+        
+        if self.is_rerank_enable:
+            print("Rerank")
+            compressor = CohereRerank()
+        else:
+            llm = ChatCohere(model="command-r", temperature=0)
+            compressor = LLMChainExtractor.from_llm(llm=llm)
+            
         # Retrieval
-        documents = self.retriever.invoke(question)
+        if self.is_compression_enable:
+            compression_retriever = ContextualCompressionRetriever(base_retriever=self.retriever, base_compressor=compressor)
+            retriever = compression_retriever
+        else:
+            retriever = self.retriever
+            
+        documents = retriever.invoke(question)
         return {"documents": documents, "question": question}
 
 
@@ -76,7 +92,7 @@ class RAGManager:
         question = state["question"]
 
         # LLM
-        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=LLM_FALLBACK_PREAMBLE)
+        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=LLM_FALLBACK_PREAMBLE if not self.is_ap else LLM_FALLBACK_PREAMBLE_AP)
 
         # Prompt
         prompt = lambda x: ChatPromptTemplate.from_messages(
@@ -91,7 +107,7 @@ class RAGManager:
         llm_chain = prompt | llm | StrOutputParser()
 
         generation = llm_chain.invoke({"question": question})
-        return {"question": question, "generation": generation}
+        return {"question": question, "generation": generation}        
 
 
     def generate(self, state):
@@ -111,7 +127,7 @@ class RAGManager:
             documents = [documents]
 
         # LLM
-        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=GENERATE_PREAMBLE)
+        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=GENERATE_PREAMBLE if not self.is_ap else GENERATE_PREAMBLE_AP)
 
         # Prompt
         prompt = lambda x: ChatPromptTemplate.from_messages(
@@ -196,6 +212,7 @@ class RAGManager:
             web_results = "\n".join([d["content"] for d in docs])
         except:
             web_results = "The question is too long."
+
         web_results = Document(page_content=web_results)
 
         return {"documents": web_results, "question": question}
@@ -219,12 +236,8 @@ class RAGManager:
         # LLM with tool use and preamble
         llm = ChatCohere(model="command-r", temperature=0)
         
-        if self.is_web_search_enabled:
-            structured_llm_router = llm.bind_tools(tools=[WebSearch, Vectorstore], preamble=ROUTE_QUESTION_PREAMBLE_WITH_WEB_SEARCH)
+        structured_llm_router = llm.bind_tools(tools=[WebSearch, Vectorstore], preamble=ROUTE_QUESTION_PREAMBLE_WITH_WEB_SEARCH)
             
-        else:
-            structured_llm_router = llm.bind_tools(tools=[Vectorstore], preamble=ROUTE_QUESTION_PREAMBLE_WITHOUT_WEB_SEARCH)
-
         # Prompt
         route_prompt = ChatPromptTemplate.from_messages(
             [
@@ -275,13 +288,8 @@ class RAGManager:
             # All documents have been filtered check_relevance
             # We will re-generate a new query
 
-            if self.is_web_search_enabled:
-                print("---DECISION: ALL DOCUMENTS ARE NOT RELEVANT TO QUESTION, WEB SEARCH---")
-                
-                return "web_search"
-            else:
-                print("---DECISION: ALL DOCUMENTS ARE NOT RELEVANT TO QUESTION, LLM---")
-                return "generate"
+            print("---DECISION: ALL DOCUMENTS ARE NOT RELEVANT TO QUESTION, WEB SEARCH---")
+            return "web_search"
         else:
             # We have relevant documents, so generate answer
             print("---DECISION: GENERATE---")
@@ -345,6 +353,7 @@ class RAGManager:
             # Check question-answering
             print("---GRADE GENERATION vs QUESTION---")
             score = answer_grader.invoke({"question": question,"generation": generation})
+
             try: 
                 grade = score.binary_score
             except:
@@ -354,12 +363,7 @@ class RAGManager:
                 print("---DECISION: GENERATION ADDRESSES QUESTION---")
                 return "useful"
             else:
-                print("---DECISION: GENERATION DOES NOT ADDRESS QUESTION---")
-
-                if not self.is_web_search_enabled:
-                    print("---DECISION: GENERATION ADDRESSES QUESTION---")
-                    return "not supported"
-                
+                print("---DECISION: GENERATION DOES NOT ADDRESS QUESTION---")                
                 return "not useful"
         else:
             print("---DECISION: GENERATION IS NOT GROUNDED IN DOCUMENTS, RE-TRY---")
@@ -413,22 +417,27 @@ class RAGManager:
 
 
     def run(self, question:str):
+        
+        # Compile the StateGraph application
         app = self.build_graph()
+        
+        # The input to the application will be the given prompt
         inputs = {"question": question}
+        
+        # Print state information as the app traverses each node
         for output in app.stream(inputs):
             for key, value in output.items():
-                # Node
                 pprint.pprint(f"Node '{key}':")
-                # Optional: print full state at each node
             pprint.pprint("\n---\n")
 
-        # Final generation
+        # Print final response, or the generated text
         response = value["generation"]
         pprint.pprint(response)
 
         # add refereces to response
         sources = None
         contexts = None
+
         if "documents" in value:
             sources = [doc.metadata.get(CHUNK_ID, None) for doc in value["documents"]]
             contexts = [doc.page_content for doc in value["documents"]]
@@ -436,30 +445,26 @@ class RAGManager:
         return response, sources, contexts
 
 
-    def get_answer(chroma_path:str, embedding_function, question: str):
+    @staticmethod
+    def get_answer_wo_rag(question: str, is_ap=False):
 
-        db = Chroma(
-            persist_directory=chroma_path, 
-            embedding_function=embedding_function
-        )
+        prompt_template = ChatPromptTemplate(
+            messages=[
+                HumanMessage(
+                    f"""{PURE_LLM_PREAMBLE if not is_ap else PURE_LLM_PREAMBLE_AP}\n\nQuestion: {question}"""
+                )
+            ]
+        
+        ) # FIXME: hard-coded since it is time-consuming
+        prompt = prompt_template.format(question=question)
 
-        results = db.similarity_search_with_score(question, k=5)
-
-        context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
-
-        prompt_template = hub.pull("rlm/rag-prompt") # FIXME: hard-coded since it is time-consuming
-        prompt = prompt_template.format(context=context_text, question=question)
-
-        llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+        llm = ChatCohere(model="command-r", temperature=0)
 
         chain = (
             llm |
             StrOutputParser()
         )
 
-        # add refereces to response
-        sources = [f'{doc.metadata.get("id", None)}:{_score}' for doc, _score in results]
-
         response = chain.invoke(prompt)
 
-        return response, sources
+        return response

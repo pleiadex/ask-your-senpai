@@ -25,17 +25,6 @@ load_dotenv()
 # build vector database
 chroma_path = f'./tmp/ap_textbooks/chroma.db'
 
-textbook_dir_path = './data/ap_textbooks'
-
-# pdf_file_paths = [os.path.join(textbook_dir_path, file) for file in os.listdir(textbook_dir_path)]
-
-# pdf_file_paths = ['data/ap_textbooks/us-history.pdf', 'data/ap_textbooks/us-history-2.pdf'] # FIXME: temporary
-
-# pdf_docs = PDFManager.get_docs_from_text(pdf_file_paths)
-# chunks = DatabaseManager.split_documents(pdf_docs)
-# DatabaseManager.update_vectorstore(chroma_path, chunks)
-
-
 # get the embedding function
 embedding_function = DatabaseManager.get_embedding_function()
 
@@ -78,8 +67,6 @@ for subject in subjects:
               
               # write response and ground truth to the output file
               output_file.write(f"{i + 1}, {response}, {item['ground_truth']}\n")
-
-            time.sleep(40) # free tier limit: 20 requests per minute
 
 
     # save qa_dataset to a json file

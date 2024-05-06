@@ -47,8 +47,11 @@ def source_formatter(sources: list):
 
 
 def main():
+    
+    # Load environment variables in .env
     load_dotenv()
 
+    # Initialize chat application
     st.set_page_config(page_title="Ask your senpai", page_icon="🤓")
     st.header("Ask your smart senpai 👀")
 
@@ -56,21 +59,48 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
 
+    # Initialize the ChromaDB file for this session
     if "chroma_path" not in st.session_state:
         uuid = str(uuid4())
         st.session_state.chroma_path = f'./tmp/{uuid}/chroma.db'
 
-    chroma_path = st.session_state.chroma_path
+    # Enable a toggle for allowing web search
     
-    is_web_search_enabled = st.toggle("Allow web search", True)
+    enable_rag = st.toggle("Enable RAG", True)
+    
+    enable_compression = st.toggle("Enable compression", True)
+    
+    enable_rerank = st.toggle("Enable reranking", True)
 
+    # Write all messages in the current chat history for this session to the UI
     for message in st.session_state.chat_history:
         with st.chat_message(message["role"].name, avatar=message["role"].avatar):
             st.markdown(message["content"])
 
-    # Display the chat history  
+            # expandable sections for sources
+            if "contexts" in message and len(message["contexts"]) > 0:
+                expander = st.expander("See the references")
+                for context in message["contexts"]:
+                    expander.write(context)
+            
+
+    with st.sidebar:
+        num_docs_context = st.text_input("Number of vectors used as context")
+        
+        if num_docs_context:
+            try:
+                num_docs = int(num_docs_context)
+                st.write(f"You entered: {num_docs}")
+            except(ValueError):
+                st.write(f"Invalid input")
+        else:
+            num_docs = 4
+            
+
+    # Get and process the next inputted prompt
     if prompt := st.chat_input("Ask a question about your textbooks"):
         
+        # Add a text box to the UI for the USER prompt
         st.session_state.chat_history.append({"role": USER, "content": prompt})
         with st.chat_message(USER.name, avatar=USER.avatar):
             st.markdown(prompt)
@@ -78,8 +108,23 @@ def main():
         # invoke the chain
         with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):            
             embedding_function = DatabaseManager.get_embedding_function()
-            response, sources, contexts = RAGManager(chroma_path, embedding_function, is_web_search_enabled).run(prompt)
             
+            sources = None
+            contexts = None
+
+            if enable_rag:
+                response, sources, contexts = RAGManager(
+                                                    st.session_state.chroma_path, 
+                                                    embedding_function, 
+                                                    False,  # is_ap
+                                                    num_docs, 
+                                                    enable_compression, 
+                                                    enable_rerank
+                                                ).run(prompt)
+            else:
+                response = RAGManager.get_answer_wo_rag(prompt, False)
+
+                
             st.write_stream(response_generator(response))
 
             formatted_sources = ""
@@ -87,9 +132,15 @@ def main():
                 formatted_sources = source_formatter(sources)
                 st.markdown(formatted_sources)
 
+                # add expandable sections for contexts
+                expander = st.expander("See the references")
+                for i in range(len(contexts)):
+                    contexts[i] = contexts[i].replace('~', '\~')
+                    expander.write(contexts[i])
+
             content = f"{response}\n\n{formatted_sources}" if formatted_sources else response
 
-        st.session_state.chat_history.append({"role": SENPAI, "content": content})
+        st.session_state.chat_history.append({"role": SENPAI, "content": content, "contexts": contexts})
 
     with st.sidebar:
         st.subheader("Textbook Library")
@@ -106,7 +157,7 @@ def main():
 
                 # update the vector database
                 chunks = DatabaseManager.split_documents(docs)
-                DatabaseManager.update_vectorstore(chroma_path, chunks)
+                DatabaseManager.update_vectorstore(st.session_state.chroma_path, chunks)
 
             success = st.success("Textbooks uploaded successfully")
             time.sleep(2)
