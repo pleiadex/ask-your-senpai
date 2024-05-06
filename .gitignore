@@ -163,3 +163,8 @@ launch.json
 
 # chroma db files
 tmp/
+
+# ap textbooks
+data/ap_textbooks/
+
+.DS_Store

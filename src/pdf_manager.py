@@ -15,14 +15,21 @@ class PDFManager:
           reader = PdfReader(pdf)
           for i, page in enumerate(reader.pages):
 
-              text = page.extract_text()
+                text = page.extract_text()
 
-              #TODO: process equations
+                #TODO: process equations
 
-              metadata = {'page_number': i + 1, 'source': pdf.name, 'type': 'text', 'format': 'pdf'}
-              doc = Document(page_content=text, metadata=metadata)
+                # name handling
+                try:
+                    name = pdf.name
+                except:
+                    # file path handling
+                    name = pdf.split('/')[-1]
+                
+                metadata = {'page_number': i + 1, 'source': name, 'type': 'text', 'format': 'pdf'}
+                doc = Document(page_content=text, metadata=metadata)
 
-              docs.append(doc)
+                docs.append(doc)
 
       return docs
 
