@@ -15,7 +15,7 @@ id, answer, ground_truth
 14, C, C
 15, D, D
 16, D, D
-17, B, B
+17, A, B
 18, C, C
 19, B, B
 20, A, A
@@ -37,7 +37,7 @@ id, answer, ground_truth
 36, B, C
 37, B, B
 38, C, C
-39, B, A
+39, A, A
 40, D, D
 41, C, C
 42, D, D

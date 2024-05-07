@@ -10,7 +10,6 @@ from models.grader_model import GradeDocuments, GradeHallucinations, GradeAnswer
 from models.graph_state import GraphState
 
 # Tools
-from langchain import hub
 from langchain.schema import Document
 from langchain_cohere import ChatCohere
 from langchain_core.prompts import ChatPromptTemplate
@@ -480,28 +479,27 @@ class RAGManager:
             embedding_function=self.embedding_function
         )
 
-        results = db.similarity_search_with_score(question, k=5)
+        results = db.similarity_search_with_score(question, k=self.num_docs)
 
-        context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
-
-        prompt_template = ChatPromptTemplate(
-            messages=[
+        # Prompt
+        prompt = lambda x: ChatPromptTemplate.from_messages(
+            [
                 HumanMessage(
-                    f"""{VANILLA_RAG_PREAMBLE if not self.is_ap else VANILLA_RAG_PREAMBLE_AP}\n\nContext: {context_text}\n\n Answer this Question: {question}"""
+                    f"Question: {x['question']} \nAnswer: ",
+                    additional_kwargs={"documents": x},
                 )
             ]
-        
         )
-        prompt = prompt_template.format(context=context_text, question=question)
 
-        llm = ChatCohere(model="command-r", temperature=0)
+        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=GENERATE_PREAMBLE if not self.is_ap else GENERATE_PREAMBLE_AP)
 
         chain = (
+            prompt |
             llm |
             StrOutputParser()
         )
 
-        response = chain.invoke(prompt)
+        response = chain.invoke({"documents": results, "question": question})
 
         sources = [f'{doc.metadata.get("id", None)}:{_score}' for doc, _score in results]
 

@@ -1,13 +1,13 @@
 id, answer, ground_truth
-1, C, C
-2, E, E
+1, The correct answer is (C): Biomedical., (C)
+2, The correct answer is (E): persistent anxiety-provoking thoughts., (E)
 3, B, B
 4, D, D
-5, B, B
-6, A, D
+5, The correct answer is (B): Preoperational., (B)
+6, D, D
 7, A, A
 8, D, D
-9, A, B
+9, B, B
 10, E, E
 11, E, E
 12, A, D
@@ -16,56 +16,56 @@ id, answer, ground_truth
 15, D, D
 16, D, D
 17, E, E
-18, B, B
+18, The answer is (B)., B
 19, A, A
 20, A, A
-21, D, D
+21, The correct answer is (D) object permanence., D
 22, B, B
 23, A, A
 24, C, C
-25, E, D
+25, D, D
 26, C, C
 27, C, C
 28, C, C
 29, A, A
-30, D, E
+30, E, E
 31, E, E
-32, B, A
+32, A, A
 33, C, C
 34, D, D
 35, B, B
 36, A, A
 37, B, B
-38, E, E
+38, The answer is (E)., E
 39, C, C
 40, B, B
 41, D, D
 42, B, B
-44, D, C
-45, D, D
+44, C, C
+45, The correct answer is (D)., D
 46, B, B
-47, E, E
+47, The correct answer is (E)., E
 48, E, E
 49, D, D
-50, E, E
-51, A, E
+50, The correct answer is (E) Positron emission tomography (PET)., E
+51, The correct answer is (E): The serial position effect., E
 52, E, E
-53, D, D
+53, A, D
 54, C, C
-55, E, D
+55, D, D
 56, E, E
 57, A, A
 58, C, C
-59, A, D
+59, The correct answer is (D) decrease the amount of time needed to administer the test., D
 60, A, A
-61, E, E
+61, The correct answer is (E): Bipolar and ganglion cells., E
 62, A, A
 63, B, B
 64, C, C
 65, A, A
-66, A, E
+66, The correct answer is (D)., E
 67, C, C
-68, D, D
+68, The correct answer is (D)., D
 69, C, C
 70, C, C
 71, C, C
@@ -74,25 +74,25 @@ id, answer, ground_truth
 74, D, D
 75, B, B
 76, C, C
-77, D, D
+77, The correct answer is (D): alcohol tolerance., D
 78, B, B
-79, E, E
-80, D, D
-81, E, E
+79, The correct answer is (E) phonemes., E
+80, The correct answer is (D): the action potential., D
+81, The correct answer is (E) biofeedback., E
 83, A, A
 84, E, E
 86, C, C
 87, D, D
 88, B, B
-89, E, E
+89, The answer is (E)., E
 90, C, C
-91, C, A
+91, A, A
 92, A, A
-93, D, D
+93, The correct answer is (D) procedural., D
 94, B, B
-95, D, D
+95, The answer is (D): Broca's area., D
 96, A, A
-97, C, C
+97, The correct answer is (C): "Jennifer studies hard because her parents reward her by paying $20 for each superior grade that she brings home.", C
 98, A, A
 99, D, D
 100, B, B

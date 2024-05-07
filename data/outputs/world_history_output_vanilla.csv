@@ -1,21 +1,21 @@
 id, answer, ground_truth
 1, C, C
 2, A, A
-3, D, D
+3, C, D
 4, B, B
 5, A, A
 6, C, C
 7, C, C
-8, D, B
+8, (C) Muslim society during the early Caliphates, B
 9, D, D
-10, B  D  B  B  D  D  B  A  C  D, D
+10, D, D
 11, A, A
-12, D B C D A B D B A C D, B
+12, B, B
 13, D, D
 14, C, C
 15, D, D
 16, D, D
-17, A, B
+17, B, B
 18, C, C
 19, B, B
 20, A, A
@@ -23,34 +23,34 @@ id, answer, ground_truth
 22, C, C
 23, D, D
 24, D, B
-25, C, C
-26, D, A
+25, B, C
+26, A, A
 27, A, A
-28, B, D, A, C, B, D, C, A, B, C, A, D, C, A, B, D, A, C, B, D, A, B
+28, (B) The sponsorship of art by new elites, B
 29, A, A
-30, C  B  C  C  B  A  C  C  B  B  C, C
-31, D, A
+30, C, C
+31, (A), A
 32, B, B
-33, D, D
+33, C, D
 34, C, C
 35, C, C
-36, C, C
-37, D, B
+36, (A), C
+37, B, B
 38, C, C
 39, A, A
 40, D, D
-41, D, C
-42, B, D
-43, D, B
-44, D, A
-45, D, D
-46, C, C
+41, C, C
+42, D, D
+43, B, B
+44, (A), A
+45, (D) The establishment of European trading-post empires, D
+46, A, C
 47, C, C
 48, D, D
-49, D, D
-50, A, B
-51, A B A D C B C D B A D C A, D
-52, A B C C B A C B C D, B
+49, (A), D
+50, B, B
+51, D, D
+52, B, B
 53, C, C
 54, C, C
 55, D, D

@@ -1,7 +1,13 @@
 import csv
 
 def compare_answers(answer, ground_truth):
-    return answer == ground_truth
+    if answer == ground_truth:
+        return True
+    
+    if f"({ground_truth.replace(' ', '')})" in answer:
+        return True
+    
+    return False
 
 subjects = ['us_history', 'world_history', 'biology',  'macro_economics', 'psychology']
 
@@ -24,7 +30,7 @@ for subject in subjects:
         for row in csv_reader:
             # Access the data in each row
             answer = row[1]
-            ground_truth = row[2]
+            ground_truth = row[-1]
             if compare_answers(answer, ground_truth):
                 rag_count += 1
 
@@ -34,7 +40,7 @@ for subject in subjects:
 
         for row in csv_reader:
             answer = row[1]
-            ground_truth = row[2]
+            ground_truth = row[-1]
             if compare_answers(answer, ground_truth):
                 llm_count += 1
 
@@ -43,7 +49,7 @@ for subject in subjects:
 
         for row in csv_reader:
             answer = row[1]
-            ground_truth = row[2]
+            ground_truth = row[-1]
             if compare_answers(answer, ground_truth):
                 vanilia_rag_count += 1
   
