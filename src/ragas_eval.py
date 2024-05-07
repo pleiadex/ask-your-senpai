@@ -1,17 +1,13 @@
 import os
-import time
-import json
-from uuid import uuid4
-from dotenv import load_dotenv
-
+import pandas as pd
 from datasets import Dataset
-
-from ragas import evaluate
+from dotenv import load_dotenv
 
 from pdf_manager import PDFManager
 from database_manager import DatabaseManager
 from rag_manager import RAGManager
 
+from ragas import evaluate
 from ragas.metrics import (
     answer_relevancy,
     faithfulness,
@@ -21,86 +17,106 @@ from ragas.metrics import (
 
 load_dotenv()
 
-
 # build vector database
-chroma_path = f'./tmp/ap_textbooks/chroma.db'
+chroma_path = f'./tmp/papers/chroma.db'
 
-textbook_dir_path = './data/ap_textbooks'
+paper_dir_path = './data/papers'
 
-# pdf_file_paths = [os.path.join(textbook_dir_path, file) for file in os.listdir(textbook_dir_path)]
+pdf_file_paths = [os.path.join(paper_dir_path, file) for file in os.listdir(paper_dir_path) if file.endswith('.pdf')]
 
-# pdf_file_paths = ['data/ap_textbooks/us-history.pdf', 'data/ap_textbooks/us-history-2.pdf'] # FIXME: temporary
-
-# pdf_docs = PDFManager.get_docs_from_text(pdf_file_paths)
-# chunks = DatabaseManager.split_documents(pdf_docs)
-# DatabaseManager.update_vectorstore(chroma_path, chunks)
-
+pdf_docs = PDFManager.get_docs_from_text(pdf_file_paths)
+chunks = DatabaseManager.split_documents(pdf_docs)
+DatabaseManager.update_vectorstore(chroma_path, chunks)
 
 # get the embedding function
 embedding_function = DatabaseManager.get_embedding_function()
 
+# df = pd.read_pickle('./data/papers/papers.pkl')
+df = pd.read_csv('./data/papers/papers.csv')
 
-# initialize the dataset
-subjects = ['us_history']
-
-total_results = {}
-
-for subject in subjects:
-    qa_dataset = {
+vanilla_qa_dataset = {
         'question': [],
         'contexts': [],
         'answer': [],
         'ground_truth': []
     }
 
-    with open(f'./data/ap_exams/{subject}_full.json') as f:
-        data = json.load(f)
-        for i, item in enumerate(data['qa-dataset']):
-            qa_dataset['question'].append(item['question'])
-            qa_dataset['ground_truth'].append(item['ground_truth'])
+advanced_qa_dataset = {
+        'question': [],
+        'contexts': [],
+        'answer': [],
+        'ground_truth': []
+    }
 
-            response, sources, contexts = RAGManager(chroma_path, embedding_function, True).run(item['question'])
+for index, row in df.iterrows():
+    if type(row['ground_truth']) is not str:
+        continue
+    
+    # vanilla rag
+    response, sources, contexts = RAGManager(
+                                        chroma_path,
+                                        embedding_function, 
+                                        False,   # is_ap
+                                        5,      # top_k
+                                        False,   # compression
+                                        False    # rerank
+                                    ).get_answer_w_vanilla_rag(row['question'])
 
-            print(item['ground_truth'])
+    
+    vanilla_qa_dataset['question'].append(row['question'])
+    vanilla_qa_dataset['contexts'].append(contexts)
+    vanilla_qa_dataset['answer'].append(response)
+    vanilla_qa_dataset['ground_truth'].append(row['ground_truth'])
 
-            qa_dataset['answer'].append(response)
-            qa_dataset['contexts'].append(contexts)
+    # advanced rag
+    response, sources, contexts = RAGManager(
+                                        chroma_path,
+                                        embedding_function, 
+                                        False,   # is_ap
+                                        5,      # top_k
+                                        True,   # compression
+                                        True    # rerank
+                                    ).run(row['question'])
+    
+    advanced_qa_dataset['question'].append(row['question'])
+    advanced_qa_dataset['contexts'].append(contexts)
+    advanced_qa_dataset['answer'].append(response)
+    advanced_qa_dataset['ground_truth'].append(row['ground_truth'])
 
-            # create an output text file
-            output_file_path = f'./data/outputs/{subject}_output.csv'
-            output_directory = os.path.dirname(output_file_path)
-            os.makedirs(output_directory, exist_ok=True)
+print(vanilla_qa_dataset)
+print(advanced_qa_dataset)
 
-            with open(output_file_path, 'a') as output_file:
-              # write header if file is empty
-              if os.stat(output_file_path).st_size == 0:
-                output_file.write("id, answer, ground_truth\n")
-              
-              # write response and ground truth to the output file
-              output_file.write(f"{i + 1}, {response}, {item['ground_truth']}\n")
+vanilla_dataset = Dataset.from_dict(vanilla_qa_dataset)
+advanced_dataset = Dataset.from_dict(advanced_qa_dataset)
 
-            time.sleep(40) # free tier limit: 20 requests per minute
+# run ragas evaluation
+vanilla_result = evaluate(
+    vanilla_dataset,
+    metrics=[
+        context_precision,
+        faithfulness,
+        answer_relevancy,
+        context_recall,
+    ],
+    raise_exceptions=False
+)
 
+advanced_result = evaluate(
+    advanced_dataset,
+    metrics=[
+        context_precision,
+        faithfulness,
+        answer_relevancy,
+        context_recall,
+    ],
+    raise_exceptions=False
+)
 
-    # save qa_dataset to a json file
-    with open(f'./data/qa_dataset/{subject}_qa_dataset.json', 'w') as f:
-        json.dump(qa_dataset, f)
+# save total_results to a text file
+with open('./data/outputs/ragas_vanilla_results.txt', 'w') as f:
+    f.write(str(vanilla_result))
+    print(vanilla_result)
 
-    # run ragas evaluation
-    result = evaluate(
-        Dataset.from_dict(qa_dataset),
-        metrics=[
-            context_precision,
-            faithfulness,
-            answer_relevancy,
-            context_recall,
-        ],
-        raise_exceptions=False
-    )
-
-    total_results[subject] = result
-
-
-print(total_results)
-
-# TODO: visualize the results
+with open('./data/outputs/ragas_advanced_results.txt', 'w') as f:
+    f.write(str(advanced_result))
+    print(advanced_result)

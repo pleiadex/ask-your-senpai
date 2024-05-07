@@ -166,6 +166,6 @@ tmp/
 
 # ap textbooks
 data/ap_textbooks/
-data/textbooks/
+data/papers/
 
 .DS_Store

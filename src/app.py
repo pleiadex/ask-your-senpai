@@ -65,7 +65,6 @@ def main():
         st.session_state.chroma_path = f'./tmp/{uuid}/chroma.db'
 
     # Enable a toggle for allowing web search
-    is_web_search_enabled = st.toggle("Allow web search", True)
     
     enable_rag = st.toggle("Enable RAG", True)
     
@@ -77,7 +76,14 @@ def main():
     for message in st.session_state.chat_history:
         with st.chat_message(message["role"].name, avatar=message["role"].avatar):
             st.markdown(message["content"])
+
+            # expandable sections for sources
+            if "contexts" in message and message["contexts"] is not None and len(message["contexts"]) > 0:
+                expander = st.expander("See the references")
+                for context in message["contexts"]:
+                    expander.write(context)
             
+
     with st.sidebar:
         num_docs_context = st.text_input("Number of vectors used as context")
         
@@ -90,7 +96,6 @@ def main():
         else:
             num_docs = 4
             
-        
 
     # Get and process the next inputted prompt
     if prompt := st.chat_input("Ask a question about your textbooks"):
@@ -100,15 +105,26 @@ def main():
         with st.chat_message(USER.name, avatar=USER.avatar):
             st.markdown(prompt)
 
-        # Invoke the app (StateGraph)
-        with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):
-            
+        # invoke the chain
+        with st.chat_message(SENPAI.name, avatar=SENPAI.avatar):            
             embedding_function = DatabaseManager.get_embedding_function()
             
+            sources = None
+            contexts = None
+
             if enable_rag:
-                response, sources, contexts = RAGManager(st.session_state.chroma_path, embedding_function, is_web_search_enabled, num_docs, enable_compression, enable_rerank).run(prompt)
+                response, sources, contexts = RAGManager(
+                                                    st.session_state.chroma_path, 
+                                                    embedding_function, 
+                                                    False,  # is_ap
+                                                    num_docs, 
+                                                    enable_compression, 
+                                                    enable_rerank
+                                                ).run(prompt)
             else:
-                response, sources = RAGManager.get_answer()
+                response = RAGManager.get_answer_wo_rag(prompt, False)
+
+                
             st.write_stream(response_generator(response))
 
             formatted_sources = ""
@@ -116,9 +132,15 @@ def main():
                 formatted_sources = source_formatter(sources)
                 st.markdown(formatted_sources)
 
+                # add expandable sections for contexts
+                expander = st.expander("See the references")
+                for i in range(len(contexts)):
+                    contexts[i] = contexts[i].replace('~', '\~')
+                    expander.write(contexts[i])
+
             content = f"{response}\n\n{formatted_sources}" if formatted_sources else response
 
-        st.session_state.chat_history.append({"role": SENPAI, "content": content})
+        st.session_state.chat_history.append({"role": SENPAI, "content": content, "contexts": contexts})
 
     with st.sidebar:
         st.subheader("Textbook Library")

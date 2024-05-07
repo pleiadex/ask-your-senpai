@@ -10,9 +10,7 @@ from models.grader_model import GradeDocuments, GradeHallucinations, GradeAnswer
 from models.graph_state import GraphState
 
 # Tools
-from langchain import hub
 from langchain.schema import Document
-from langchain_openai import ChatOpenAI
 from langchain_cohere import ChatCohere
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import HumanMessage
@@ -27,12 +25,10 @@ from langchain_cohere import CohereRerank
 
 class RAGManager:
 
-    def __init__(self, chroma_path:str, embedding_function, is_web_search_enabled:bool, num_docs: int, enable_compression: bool, enable_rerank: bool):
+    def __init__(self, chroma_path:str, embedding_function, is_ap:bool, num_docs: int, enable_compression: bool, enable_rerank: bool):
         self.chroma_path = chroma_path
         self.embedding_function = embedding_function
-        yes = 'yes'
-        no = 'no'
-        self.is_web_search_enabled = is_web_search_enabled
+        self.is_ap = is_ap
         self.loop_count = 0
         self.max_loops = 3
         self.num_docs = num_docs
@@ -46,7 +42,7 @@ class RAGManager:
             embedding_function=self.embedding_function
         )
 
-        self.retriever = vectorstore.as_retriever(search_kwargs={"k":self.num_docs})
+        self.retriever = vectorstore.as_retriever(search_kwargs={"k": self.num_docs})
         print(self.num_docs)
 
     def retrieve(self, state):
@@ -66,14 +62,17 @@ class RAGManager:
         
         if self.is_rerank_enable:
             print("Rerank")
-            compressor = CohereRerank()
+            compressor = CohereRerank(top_n=self.num_docs)
         else:
             llm = ChatCohere(model="command-r", temperature=0)
             compressor = LLMChainExtractor.from_llm(llm=llm)
             
         # Retrieval
         if self.is_compression_enable:
-            compression_retriever = ContextualCompressionRetriever(base_retriever=self.retriever, base_compressor=compressor)
+            compression_retriever = ContextualCompressionRetriever(
+                                        base_retriever=self.retriever, 
+                                        base_compressor=compressor
+                                    )
             retriever = compression_retriever
         else:
             retriever = self.retriever
@@ -96,7 +95,7 @@ class RAGManager:
         question = state["question"]
 
         # LLM
-        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=LLM_FALLBACK_PREAMBLE)
+        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=LLM_FALLBACK_PREAMBLE if not self.is_ap else LLM_FALLBACK_PREAMBLE_AP)
 
         # Prompt
         prompt = lambda x: ChatPromptTemplate.from_messages(
@@ -131,7 +130,7 @@ class RAGManager:
             documents = [documents]
 
         # LLM
-        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=GENERATE_PREAMBLE)
+        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=GENERATE_PREAMBLE if not self.is_ap else GENERATE_PREAMBLE_AP)
 
         # Prompt
         prompt = lambda x: ChatPromptTemplate.from_messages(
@@ -240,12 +239,8 @@ class RAGManager:
         # LLM with tool use and preamble
         llm = ChatCohere(model="command-r", temperature=0)
         
-        if self.is_web_search_enabled:
-            structured_llm_router = llm.bind_tools(tools=[WebSearch, Vectorstore], preamble=ROUTE_QUESTION_PREAMBLE_WITH_WEB_SEARCH)
+        structured_llm_router = llm.bind_tools(tools=[WebSearch, Vectorstore], preamble=ROUTE_QUESTION_PREAMBLE_WITH_WEB_SEARCH)
             
-        else:
-            structured_llm_router = llm.bind_tools(tools=[Vectorstore], preamble=ROUTE_QUESTION_PREAMBLE_WITHOUT_WEB_SEARCH)
-
         # Prompt
         route_prompt = ChatPromptTemplate.from_messages(
             [
@@ -296,13 +291,8 @@ class RAGManager:
             # All documents have been filtered check_relevance
             # We will re-generate a new query
 
-            if self.is_web_search_enabled:
-                print("---DECISION: ALL DOCUMENTS ARE NOT RELEVANT TO QUESTION, WEB SEARCH---")
-                
-                return "web_search"
-            else:
-                print("---DECISION: ALL DOCUMENTS ARE NOT RELEVANT TO QUESTION, LLM---")
-                return "generate"
+            print("---DECISION: ALL DOCUMENTS ARE NOT RELEVANT TO QUESTION, WEB SEARCH---")
+            return "web_search"
         else:
             # We have relevant documents, so generate answer
             print("---DECISION: GENERATE---")
@@ -366,7 +356,7 @@ class RAGManager:
             # Check question-answering
             print("---GRADE GENERATION vs QUESTION---")
             score = answer_grader.invoke({"question": question,"generation": generation})
-            
+
             try: 
                 grade = score.binary_score
             except:
@@ -376,12 +366,7 @@ class RAGManager:
                 print("---DECISION: GENERATION ADDRESSES QUESTION---")
                 return "useful"
             else:
-                print("---DECISION: GENERATION DOES NOT ADDRESS QUESTION---")
-
-                if not self.is_web_search_enabled:
-                    print("---DECISION: GENERATION ADDRESSES QUESTION---")
-                    return "not supported"
-                
+                print("---DECISION: GENERATION DOES NOT ADDRESS QUESTION---")                
                 return "not useful"
         else:
             print("---DECISION: GENERATION IS NOT GROUNDED IN DOCUMENTS, RE-TRY---")
@@ -463,30 +448,62 @@ class RAGManager:
         return response, sources, contexts
 
 
-    def get_answer(chroma_path:str, embedding_function, question: str):
+    @staticmethod
+    def get_answer_wo_rag(question: str, is_ap=False):
 
-        db = Chroma(
-            persist_directory=chroma_path, 
-            embedding_function=embedding_function
+        prompt_template = ChatPromptTemplate(
+            messages=[
+                HumanMessage(
+                    f"""{PURE_LLM_PREAMBLE if not is_ap else PURE_LLM_PREAMBLE_AP}\n\nQuestion: {question}"""
+                )
+            ]
+        
         )
+        prompt = prompt_template.format(question=question)
 
-        results = db.similarity_search_with_score(question, k=5)
-
-        context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
-
-        prompt_template = hub.pull("rlm/rag-prompt") # FIXME: hard-coded since it is time-consuming
-        prompt = prompt_template.format(context=context_text, question=question)
-
-        llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+        llm = ChatCohere(model="command-r", temperature=0)
 
         chain = (
             llm |
             StrOutputParser()
         )
 
-        # add refereces to response
-        sources = [f'{doc.metadata.get("id", None)}:{_score}' for doc, _score in results]
-
         response = chain.invoke(prompt)
 
-        return response, sources
+        return response
+    
+    def get_answer_w_vanilla_rag(self, question: str):
+
+        db = Chroma(
+            persist_directory=self.chroma_path, 
+            embedding_function=self.embedding_function
+        )
+
+        results = db.similarity_search_with_score(question, k=self.num_docs)
+
+        # Prompt
+        prompt = lambda x: ChatPromptTemplate.from_messages(
+            [
+                HumanMessage(
+                    f"Question: {x['question']} \nAnswer: ",
+                    additional_kwargs={"documents": x},
+                )
+            ]
+        )
+
+        llm = ChatCohere(model_name="command-r", temperature=0).bind(preamble=GENERATE_PREAMBLE if not self.is_ap else GENERATE_PREAMBLE_AP)
+
+        chain = (
+            prompt |
+            llm |
+            StrOutputParser()
+        )
+
+        response = chain.invoke({"documents": results, "question": question})
+
+        sources = [f'{doc.metadata.get("id", None)}:{_score}' for doc, _score in results]
+
+        contexts = [doc.page_content for doc, _ in results]
+
+
+        return response, sources, contexts
